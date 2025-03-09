@@ -62,14 +62,14 @@
 % \renewcommand{\cftsubparagraphname}{Subpar.}
 
 % (C) Distância horizontal entre (C) e (D)
-\renewcommand{\cftbooknumwidth}{2em}			
-\renewcommand{\cftpartnumwidth}{2em}
+%\renewcommand{\cftbooknumwidth}{2em}			
+%\renewcommand{\cftpartnumwidth}{2em}
 \renewcommand{\cftchapternumwidth}{2em}
-\renewcommand{\cftsectionnumwidth}{4em}
-\renewcommand{\cftsubsectionnumwidth}{4em}
-\renewcommand{\cftsubsubsectionnumwidth}{4em}
-\renewcommand{\cftparagraphnumwidth}{4em}
-\renewcommand{\cftsubparagraphnumwidth}{4em}
+%\renewcommand{\cftsectionnumwidth}{4em}
+%\renewcommand{\cftsubsectionnumwidth}{4em}
+%\renewcommand{\cftsubsubsectionnumwidth}{4em}
+%\renewcommand{\cftparagraphnumwidth}{4em}
+%\renewcommand{\cftsubparagraphnumwidth}{4em}
 
 % (D) Formatação para trecho (B), (C) e (D)
 \renewcommand{\cftbookfont}{\normalsize\scshape\MakeTextLowercase}
@@ -84,7 +84,7 @@
 % (F) formatpnum			Formatação do número
 \renewcommand{\cftbookformatpnum}{\normalsize\scshape}
 \renewcommand{\cftpartformatpnum}{\normalsize\scshape}
-\renewcommand{\cftchapterformatpnum}{>>\normalsize}
+\renewcommand{\cftchapterformatpnum}{\normalsize} %Aqui posso colocar >>
 \renewcommand{\cftsectionformatpnum}{\footnotesize}
 \renewcommand{\cftsubsectionformatpnum}{\footnotesize}
 \renewcommand{\cftsubsubsectionformatpnum}{\footnotesize}
@@ -146,8 +146,6 @@
 % Tips
 
 % \addtocontents{toc}{\cftpagenumbersoff{chapter}} % Tirar número de páginas
-
-
 
 % Comando \titlerule retirado do pacote titledoc.sty
 \providecommand\titlerule{\@ifstar{\ttl@row}{\ttl@rule}}

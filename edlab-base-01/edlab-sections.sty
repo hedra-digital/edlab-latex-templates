@@ -9,18 +9,19 @@
 \renewcommand*{\booktitlefont}{\Large}
 \renewcommand*{\midbookskip}{\par\vskip 2\onelineskip}%
 % part changes
-\renewcommand*{\partnamefont}{\Large}
+\renewcommand*{\partnamefont}{\Large\scshape\MakeTextLowercase}
 \renewcommand*{\partnumfont}{\Large}
-\renewcommand*{\parttitlefont}{\centering\Large}
+\renewcommand*{\parttitlefont}{\centering\formular\bfseries\huge}
 \renewcommand*{\midpartskip}{\par\vskip 2\onelineskip}%
 % chapter
 \setlength{\beforechapskip}{0mm}%
 \setlength{\midchapskip}{\medskipamount}
 % \renewcommand{\@chapapp}{Cap.}                     % Para mudar etiqueta "Capítulo"
 \setlength{\afterchapskip}{22mm\@plus\baselineskip\@minus\baselineskip}%
-\renewcommand*{\chapnamefont}{\formularlight}%       % Etiqueta
-\renewcommand*{\chapnumfont}{\formularlight}%        % Número
-\renewcommand*{\chaptitlefont}{\formular\bfseries}%  % Texto
+%\renewcommand*{\chapnamefont}{\formularlight}%       % Etiqueta
+%\renewcommand*{\chapnumfont}{\formularlight}%        % Número
+\renewcommand*{\chaptitlefont}{\formular\bfseries\Large}%  % Texto
+%\renewcommand*{\chaptitlefont}{\newfontfamily\minion{Minion Pro}\Huge\centering}%  % Texto
 % section
 \setbeforesecskip{1.2\onelineskip}%
 \setaftersecskip{.35\onelineskip}%
