@@ -30,7 +30,8 @@
 \pagestyle{empty} 
 % \renewcommand{\contentsname}{Índex} 	% Trocar nome do sumário para 'Índex'
 \ifodd\thepage\relax\else\blankpage\fi 	% Verifica se página é par e coloca página branca
-\tableofcontents*
+\addtocontents{toc}{\protect\thispagestyle{empty}}
+\tableofcontents*\clearpage\endgroup}
 
 \input{MUSSUMIPSUM}
 % \input{TEXTO.tex}

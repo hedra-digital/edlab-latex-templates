@@ -21,7 +21,7 @@
   \hrule width \textwidth height .2pt
   \kern 2.6\p@}}}
 
-\DeclareOption{chicagofootnotes}{
+\DeclareOption{chicagofootnotes}{\renewcommand{\footnoterule}{\vfill}
   \renewcommand\@makefntext[1]{\frenchspacing 
     \parindent 0em% 
     \@thefnmark.~#1}
