@@ -1,0 +1,38 @@
+% edlab-footnotes.sty
+\RequirePackage[para]{manyfoot}
+\RequirePackage[stable,multiple]{footmisc}
+
+% Notas de fim (package: \usepackage{endnotes})
+
+\DeclareOption{endnotes}{
+\AtEndOfClass{\RequirePackage{endnotes}
+\def\notesname{Notas}
+\def\enoteheading{\chapter{\notesname}}%
+\let\footnote\endnote}
+}
+
+\DeclareOption{notasemlinha}{\AtBeginDocument{\renewcommand{\footnoterule}{\vfill
+  \kern-3\p@
+  \hrule width .4\columnwidth height 0pt
+  \kern 2.6\p@}}}
+
+\DeclareOption{notalinhalonga}{\AtBeginDocument{\renewcommand{\footnoterule}{\vfill
+  \kern-3\p@
+  \hrule width \textwidth height .2pt
+  \kern 2.6\p@}}}
+
+\DeclareOption{chicagofootnotes}{\renewcommand{\footnoterule}{\vfill}
+  \renewcommand\@makefntext[1]{\frenchspacing 
+    \parindent 0em% 
+    \@thefnmark.~#1}
+    % endnotes
+    \newcommand\enoteformat{\parindent 1em\theenmark.~}
+    }
+
+         %reset das notas
+  \pretocmd{\@schapter}{\setcounter{footnote}{0}}{}{}
+  \pretocmd{\@chapter}{\setcounter{footnote}{0}}{}{}
+
+\ProcessOptions%
+
+

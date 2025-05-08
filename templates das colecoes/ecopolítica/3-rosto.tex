@@ -1,0 +1,83 @@
+% Tamanhos
+% \tiny
+% \scriptsize
+% \footnotesize
+% \small 
+% \normalsize
+% \large 
+% \Large 
+% \LARGE 
+% \huge
+% \Huge
+
+% Posicionamento
+% \centering 
+% \raggedright
+% \raggedleft
+% \vfill 
+% \hfill 
+% \vspace{Xcm}   % Colocar * caso esteja no começo de uma página. Ex: \vspace*{...}
+% \hspace{Xcm}
+
+% Estilo de página
+% \thispagestyle{<<nosso>>}
+% \thispagestyle{empty}
+% \thispagestyle{plain}  (só número, sem cabeço)
+% https://www.overleaf.com/learn/latex/Headers_and_footers
+
+% Compilador que permite usar fonte de sistema: xelatex, lualatex
+% Compilador que não permite usar fonte de sistema: latex, pdflatex
+
+% Definindo fontes
+% \setmainfont{Times New Roman}  % Todo o texto
+% \newfontfamily\avenir{Avenir}  % Contexto
+
+\begingroup\thispagestyle{empty}\vspace*{-.01\textheight}\parindent=0pt 
+              \formular
+              \Huge 
+              \textbf{Título}\baselineskip=.67\baselineskip 
+
+              \vspace{15mm}
+              
+              
+              \vspace{5cm}
+
+              \newfontfamily\minion{Minion Pro}
+              {\selectfont\minion\small
+              Colaborador 1 (\textit{organização})}
+              
+              {\selectfont\minion\footnotesize
+              Xª edição}
+                    
+              \vfill
+
+              \newfontfamily\timesnewroman{Times New Roman}
+              {\fontsize{30}{40}\selectfont \timesnewroman hedra}
+              
+              \medskip
+
+              {\selectfont\minion\small
+              São Paulo \quad\the\year}
+\endgroup
+\pagebreak
+
+\begingroup 
+
+\footnotesize\parindent0pt\parskip5pt\thispagestyle{empty} 
+\vspace*{.1\textheight}\mbox{} \vfill
+\baselineskip=.92\baselineskip
+\thispagestyle{empty}
+
+\textbf{Anarquistas na América do Sul} é uma antologia de 18 textos, escritos a partir do encontro de mesmo nome, resultado da livre associação de três núcleos de pesquisa: Nu-Sol (Núcleo de Sociabilidade Libertária da \textsc{puc--sp}), \textsc{lima} (Laboratório Insurgente de Maquinarias Anarquistas) e \textsc{lasi}n\textsc{t}ec (Laboratório de Análise em Segurança Internacional e Tecnologias de Monitoramento, da \textsc{unifesp}). Durante quatro dias de mesas e rodas de conversa virtuais, pesquisadores anarquistas de língua portuguesa e espanhola discutiram e experimentaram lutas e práticas libertárias. O livro, que contém o registro escrito de muitos desses debates, foi organizado de forma aberta, de modo a inscrever em sua estrutura o espírito livre do encontro --- documento fundamental da pesquisa libertária nesta região do planeta.
+
+\textbf{Edson Passeti} é professor livre-docente do Departamento de
+Ciências Sociais e Programa de Estudos Pós-Graduados em Ciências Sociais
+da Pontifícia Universidade Católica de São Paulo \textsc{puc-sp}, onde também coordena o Nu-Sol (Núcleo de Sociabilidade Libertária). Edita o \textit{Observatório Ecopolítica}.
+
+\textbf{Sílvio Gallo} é professor titular da Faculdade de Educação da Universidade Estadual de Campinas (Unicamp) e pesquisador bolsista de produtividade do Conselho Nacional de Desenvolvimento Científico e Tecnológico (\textsc{cnp}q). Graduado em Filosofia pela Pontifícia Universidade Católica de Campinas (\textsc{puc}--\,Campinas), realizou seus estudos de mestrado e doutorado na Faculdade de Educação da Unicamp, onde obteve também a livre-docência. Integrante do \textsc{lima}, Laboratório Insurgente de Maquinarias Anarquistas.
+
+\textbf{Acácio Augusto} é doutor em Ciência Sociais, com enfoque em política, pela Pontifícia Universidade Católica de São Paulo
+\textsc{puc--sp}, onde também é pesquisador do Nu-Sol (Núcleo de Sociabilidade Libertária). Professor no Departamento de Relações Internacionais da Universidade Federal de São Paulo \textsc{unifesp}, onde coordena o \textsc{lasi}n\textsc{t}ec (Laboratório de Análise em Segurança Interacional de Tecnologias de Monitoramento) --- e também no Programa de Pós-Graduação em Psicologia Institucional da Universidade Federal do Espírito Santo \textsc{ufes}. Atualmente coordena o curso de Relações Internacionais da \textsc{unifesp}.
+
+\endgroup
+\pagebreak

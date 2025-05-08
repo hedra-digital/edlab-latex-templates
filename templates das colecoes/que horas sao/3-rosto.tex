@@ -1,0 +1,65 @@
+% Tamanhos
+% \tiny
+% \scriptsize
+% \footnotesize
+% \small 
+% \normalsize
+% \large 
+% \Large 
+% \LARGE 
+% \huge
+% \Huge
+
+% Posicionamento
+% \centering 
+% \raggedright
+% \raggedleft
+% \vfill 
+% \hfill 
+% \vspace{Xcm}   % Colocar * caso esteja no começo de uma página. Ex: \vspace*{...}
+% \hspace{Xcm}
+
+% Estilo de página
+% \thispagestyle{<<nosso>>}
+% \thispagestyle{empty}
+% \thispagestyle{plain}  (só número, sem cabeço)
+% https://www.overleaf.com/learn/latex/Headers_and_footers
+
+% Compilador que permite usar fonte de sistema: xelatex, lualatex
+% Compilador que não permite usar fonte de sistema: latex, pdflatex
+
+% Definindo fontes
+% \setmainfont{Times New Roman}  % Todo o texto
+% \newfontfamily\avenir{Avenir}  % Contexto
+
+\begingroup\thispagestyle{empty}\vspace*{.05\textheight} 
+
+            
+              \Huge
+              \noindent
+              \textbf{Título}\\
+              \smallskip
+              \noindent\LARGE\textit{subtítulo}
+              
+              \vspace{3em}
+
+              \baselineskip=15pt{
+              {\normalsize\noindent Autor 1, Autor 2 e\\
+              Autor 3}} %(\textit{organização})}}
+
+              \vspace{6em}
+
+              \noindent
+              {\normalsize\noindent Xª edição}
+
+              \vfill
+
+              \newfontfamily\timesnewroman{Times New Roman}
+              {\noindent\fontsize{30}{40}\selectfont \timesnewroman hedra}
+              \smallskip
+
+              {\noindent\normalsize
+              São Paulo \quad\the\year}
+
+\endgroup
+\pagebreak

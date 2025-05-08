@@ -1,0 +1,70 @@
+% Tamanhos
+% \tiny
+% \scriptsize
+% \footnotesize
+% \small 
+% \normalsize
+% \large 
+% \Large 
+% \LARGE 
+% \huge
+% \Huge
+
+% Posicionamento
+% \centering 
+% \raggedright
+% \raggedleft
+% \vfill 
+% \hfill 
+% \vspace{Xcm}   % Colocar * caso esteja no começo de uma página. Ex: \vspace*{...}
+% \hspace{Xcm}
+
+% Estilo de página
+% \thispagestyle{<<nosso>>}
+% \thispagestyle{empty}
+% \thispagestyle{plain}  (só número, sem cabeço)
+% https://www.overleaf.com/learn/latex/Headers_and_footers
+
+% Compilador que permite usar fonte de sistema: xelatex, lualatex
+% Compilador que não permite usar fonte de sistema: latex, pdflatex
+
+% Definindo fontes
+% \setmainfont{Times New Roman}  % Todo o texto
+% \newfontfamily\avenir{Avenir}  % Contexto
+
+\begingroup\thispagestyle{empty}\vspace*{-.01\textheight}\parindent=0pt 
+              \formular
+              \Huge 
+              \textbf{Título}\baselineskip=.67\baselineskip 
+
+              \vspace{15mm}
+              
+              \LARGE
+              Autor da Silva
+
+              \vfill
+
+              \newfontfamily\minion{Minion Pro}
+              {\selectfont\minion\small
+              Colaborador 1 (\textit{introdução})}
+\vspace{0.1cm}
+
+              \noindent Colaborador 2 (\textit{apresentação})
+
+              \vspace{0.5cm}
+              
+              {\selectfont\minion\footnotesize
+   					  Xª edição}
+                    
+              \vfill
+
+              \newfontfamily\timesnewroman{Times New Roman}
+              {\fontsize{30}{40}\selectfont \timesnewroman hedra}
+              
+              \medskip
+
+              {\selectfont\minion\small
+              São Paulo \quad\the\year}
+\endgroup
+\pagebreak
+

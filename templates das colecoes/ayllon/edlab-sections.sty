@@ -1,0 +1,92 @@
+\RequirePackage{textcase}
+\RequirePackage{etoolbox}
+
+\makepagestyle{baruch}
+\makeheadstyles{baruch}{%
+% book changes
+\renewcommand*{\booknamefont}{\Large}
+\renewcommand*{\booknumfont}{\Large}
+\renewcommand*{\booktitlefont}{\Large}
+\renewcommand*{\midbookskip}{\par\vskip 2\onelineskip}%
+% part changes
+\renewcommand*{\partnamefont}{\Large\scshape\MakeTextLowercase}
+\renewcommand*{\partnumfont}{\Large}
+\renewcommand*{\parttitlefont}{\centering\formular\LARGE}
+\renewcommand*{\midpartskip}{\par\vskip 2\onelineskip}%
+% chapter
+\setlength{\beforechapskip}{0mm}%
+\setlength{\midchapskip}{\medskipamount}
+% \renewcommand{\@chapapp}{Cap.}                     % Para mudar etiqueta "Capítulo"
+\setlength{\afterchapskip}{22mm\@plus\baselineskip\@minus\baselineskip}%
+\renewcommand*{\chapnamefont}{\formularlight}%       % Etiqueta
+\renewcommand*{\chapnumfont}{\formularlight}%        % Número
+%\renewcommand*{\chaptitlefont}{\newfontfamily\minion{Minion Pro}\Huge\centering}%  % Texto
+\renewcommand*{\chaptitlefont}{\formular\large}%  % Texto
+% section
+\setbeforesecskip{1.2\onelineskip}%
+\setaftersecskip{.35\onelineskip}%
+\setsecheadstyle{\large\baselineskip=.7\baselineskip\centering\scshape\MakeTextLowercase}%
+% subsection
+\setsubsecheadstyle{\MakeTextLowercase{}\centering\small\scshape\MakeTextLowercase}%
+% subsubsection
+\setbeforesubsubsecskip{1\onelineskip}%
+\setaftersubsubsecskip{.2\onelineskip}%
+\setsubsubsecheadstyle{\centering\itshape}%
+% paragraph
+% \setbeforeparaskip{1\onelineskip}%
+% \setafterparaskip{.08\onelineskip}%
+% \setparaheadstyle{\bfseries\small}%
+}
+
+
+% Cabeços e rodapés 
+% \makeheadposition{baruch}{flushright}{flushleft}{}{}
+\makeoddhead{baruch}{}{\scshape\MakeLowercase{\scshape\MakeTextLowercase{\leftmark}}}{}
+\makeevenhead{baruch}{}{\scshape\MakeLowercase{\parttitle}}{}
+\makeevenfoot{baruch}{}{\footnotesize\thepage}{}{}
+\makeoddfoot{baruch}{}{\footnotesize\thepage}{}{}
+
+% \makeheadrule{baruch}{\textwidth}{\normalrulethickness}  % Colocar linha no cabeço
+
+\makeevenfoot{plain}{}{\footnotesize\thepage}{}{}
+\makeoddfoot{plain}{}{\footnotesize\thepage}{}{}
+
+\copypagestyle{part}{empty}
+\copypagestyle{chapter}{plain}
+
+\DeclareOption{semcabeco}{
+  \makeevenhead{baruch}{}{}{}
+  \makeoddhead{baruch}{}{}{}
+  \setulmargins{*}{*}{1.9}\headsep=0pt
+}
+
+
+% Ignorar (avançado) ====================================================
+\makepsmarks{baruch}{%
+  \nouppercaseheads
+  \createmark{chapter}{left}{nonumber}{}{}   % sectionmark or chaptermark
+  \createmark{section}{right}{nonumber}{}{}   % sectionmark or chaptermark
+  \createplainmark{toc}{both}{\contentsname}
+  \createplainmark{lof}{both}{\listfigurename}
+  \createplainmark{lot}{both}{\listtablename}
+  \createplainmark{bib}{both}{\bibname}
+  \createplainmark{index}{both}{\indexname}
+  \createplainmark{glossary}{both}{\glossaryname}}
+
+% Ignorar: Colocar o conteúdo do \part disponível para cabeço
+\newcommand*\parttitle{}        
+\let\origpart\part
+\renewcommand*{\part}[2][]{%
+   \ifx\\#1\\% optional argument not present?
+      \origpart{#2}%
+      \renewcommand*\parttitle{#2}%
+   \else
+      \origpart[#1]{#2}%
+      \renewcommand*\parttitle{#1}%
+   \fi
+}
+
+
+\ProcessOptions%
+
+

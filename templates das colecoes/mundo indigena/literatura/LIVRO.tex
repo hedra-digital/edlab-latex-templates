@@ -1,0 +1,78 @@
+\documentclass[showtrims,		% Mostra as marcas de corte em cruz
+			   %trimframe,		% Mostra as marcas de corte em linha, para conferência
+			   11pt				% 8pt, 9pt, 10pt, 11pt, 12pt, 14pt, 17pt, 20pt 
+			   ]{memoir}
+\usepackage[brazilian,
+			% english,
+			% italian,
+			% ngerman,
+			% french,
+			% russian,
+			% polutonikogreek
+			]{babel}
+\usepackage{anyfontsize}			    % para tamanhos de fontes maiores que \Huge 
+\usepackage{relsize}					% para aumentar ou diminuir fonte por pontos. Ex. \smaller[1]
+\usepackage{fontspec}					% para rodar fontes do sistema
+\usepackage[switch]{lineno} 			% para numerar linhas
+\usepackage{lipsum}						% para colocar textos lipsum
+\usepackage{alltt}						% para colocar espaços duplos. Ex: verso livre
+\usepackage{graphicx}					% para colocar imagens
+\usepackage{float}						% para flutuar imagens e tabelas 		
+\usepackage{lettrine}					% para capsulares
+\usepackage{comment}					% para comentar o código em bloco \begin{comment}...
+\usepackage{adforn}						% para adornos & glyphs
+\usepackage{xcolor}					 	% para texto colorido
+\usepackage{array}
+\usepackage[babel]{microtype}			% para ajustes finos na mancha
+\usepackage{enumerate,enumitem}			% para tipos diferentes de enumeração/formatação ver `edlab-extra.sty`
+\usepackage{url}					% para citar sites \url
+\usepackage{marginnote}					% para notas laterais
+\usepackage{titlesec}					% para produzir os distanciamentos entre pontos no \dotfill
+\usepackage{textpos}
+
+%\usepackage{makeidx} 					% para índice remissivo
+
+\usepackage{edlab-penalties}
+\usepackage{edlab-git}
+\usepackage{edlab-toc}					% define sumário
+\usepackage{edlab-extra}				% define epígrafe, quote
+\usepackage[largepost]{edlab-margins}
+\usepackage[%semcabeco, 				% para remover cabeço, sobe mancha e mantem estilos
+			]{edlab-sections}			% define pagestyle (cabeço, rodapé e seções)
+\usepackage[%
+			% notasemlinha 			
+			% notalinhalonga
+			chicagofootnotes			% para notas com número e ponto cf. man. de Chicago
+			]{edlab-footnotes}
+\usepackage{tikz}
+
+% Medidas (ver: memoir p.11 fig.2.3)
+\parindent=3ex			% Tamanho da indentação
+\parskip=0pt			% Entre parágrafos
+\marginparsep=1em		% Entre mancha e nota lateral 
+\marginparwidth=4em		% Tamanho da caixa de texto da nota laterial
+
+% Fontes
+\newfontfamily\formular{Formular}
+\newfontfamily\formularlight{Formular Light}
+%\newfontfamily\formularmi{Formular-bold-mi.otf}
+%\newfontfamily\formular{Formular}
+%\newfontfamily\formularlight{Formular Light}
+\setmainfont[Ligatures=TeX,Numbers=OldStyle]{Linux Libertine O}
+%\setmainfont[Numbers={Proportional,OldStyle}]{Linux Libertine O}
+
+% Estilos
+\makeoddhead{baruch}{}{}{}
+\makeevenhead{baruch}{}{}{}
+\makeevenfoot{baruch}{}{\footnotesize\thepage}{}
+\makeoddfoot{baruch}{}{\footnotesize\thepage}{}
+\pagestyle{baruch}		
+\headstyles{baruch}
+
+\newcommand\legenda[1]{\noindent\textcolor{white}{\small\formular\baselineskip=1.1\baselineskip #1}}
+\newcommand\legendaposfacio[1]{\noindent{\small\formular\baselineskip=1.1\baselineskip #1}}
+
+\begin{document}
+\include{INPUTS}
+\checkandfixthelayout
+\end{document}
