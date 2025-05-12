@@ -79,7 +79,19 @@
   \headsep=2mm
 }
 
-\DeclareOption{largepost}{%
+\DeclareOption{post}{%
+  \setbinding{3mm}
+  \stockaiv 
+  \settrimmedsize{191mm}{127mm}{*}
+  \settypeblocksize{*}{93mm}{1.6}
+  \setlrmargins{*}{*}{1.2}
+  \setulmargins{*}{*}{1.6}
+%  \setheadfoot{5mm}{10mm}
+%  \setheaderspaces{*}{*}{0}
+  \headsep=5mm
+}
+
+\DeclareOption{largepost}{
   \setbinding{3mm}
   \stockaiv 
   \settrimmedsize{210mm}{133mm}{*}
@@ -89,6 +101,19 @@
 %  \setheadfoot{5mm}{10mm}
 %  \setheaderspaces{*}{*}{0}
   \headsep=5mm
+}
+
+\DeclareOption{11x18}{%
+  \setbinding{9mm}
+  \stockaiv 
+  %\setstocksize{220mm}{200mm}
+  \settrimmedsize{180mm}{110mm}{*}
+  %\settypeblocksize{125mm}{72mm}{*}
+  \isopage[11]
+  %\setlrmargins{*}{30mm}{1}
+  %\setulmargins{15mm}{*}{1}
+  \setheadfoot{4mm}{8mm}
+  %\setheaderspaces{8mm}{*}{0.16}
 }
 
 \DeclareOption{bolso}{%
