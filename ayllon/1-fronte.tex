@@ -1,0 +1,53 @@
+% Tamanhos
+% \tiny
+% \scriptsize
+% \footnotesize
+% \small 
+% \normalsize
+% \large 
+% \Large 
+% \LARGE 
+% \huge
+% \Huge
+
+% Posicionamento
+% \centering 
+% \raggedright
+% \raggedleft
+% \vfill 
+% \hfill 
+% \vspace{Xcm}   % Colocar * caso esteja no começo de uma página. Ex: \vspace*{...}
+% \hspace{Xcm}
+
+% Estilo de página
+% \thispagestyle{<<nosso>>}
+% \thispagestyle{empty}
+% \thispagestyle{plain}  (só número, sem cabeço)
+% https://www.overleaf.com/learn/latex/Headers_and_footers
+
+% Compilador que permite usar fonte de sistema: xelatex, lualatex
+% Compilador que não permite usar fonte de sistema: latex, pdflatex
+
+% Definindo fontes
+% \setmainfont{Times New Roman}  % Todo o texto
+% \newfontfamily\avenir{Avenir}  % Contexto
+
+% \begin{textblock*}{2.625in}(0pt,0pt)%
+% \vspace*{-2cm}
+% \hspace*{-6.3cm}
+% \includegraphics[scale=0.7]{./FRONTE/FRONTE.pdf}
+% \end{textblock*}   
+
+\thispagestyle{empty}
+
+\begingroup
+
+\mbox{}
+\centering
+\vfill
+\includegraphics[scale=0.13]{./FRONTE/FRONTE.pdf}
+\vfill
+\mbox{}
+
+\endgroup
+\pagebreak
