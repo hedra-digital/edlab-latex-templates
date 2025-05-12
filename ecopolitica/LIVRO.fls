@@ -105,6 +105,7 @@ INPUT /usr/share/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
 INPUT /usr/share/texmf-dist/tex/latex/base/fontenc.sty
 INPUT /usr/share/texmf-dist/tex/latex/fontspec/fontspec.cfg
 INPUT /home/casa/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-bold.luc
+INPUT /usr/share/texmf-dist/tex/latex/lineno/lineno.sty
 INPUT /usr/share/texmf-dist/tex/latex/lipsum/lipsum.sty
 INPUT /usr/share/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
 INPUT /usr/share/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex
@@ -160,6 +161,7 @@ INPUT /home/casa/.texlive/texmf-var/luatex-cache/generic/fonts/otl/minionpro-bol
 INPUT /home/casa/.texlive/texmf-var/luatex-cache/generic/fonts/otl/minionpro-bold.luc
 INPUT /home/casa/.texlive/texmf-var/luatex-cache/generic/fonts/otl/minionpro-it.luc
 INPUT ./LIVRO.aux
+INPUT ./INPUTS.aux
 OUTPUT LIVRO.aux
 INPUT /usr/share/texmf-dist/tex/latex/base/ts1cmr.fd
 INPUT /usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -200,6 +202,7 @@ INPUT /home/casa/.texlive/texmf-var/luatex-cache/generic/fonts/otl/timesi.luc
 INPUT ./PRETAS.tex
 INPUT /usr/share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-la.tex
 INPUT /usr/share/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-la.tex
+INPUT ./LIVRO.toc
 INPUT ./MUSSUMIPSUM.tex
 INPUT /home/casa/.texlive/texmf-var/luatex-cache/generic/fonts/otl/minionpro-subh.luc
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
@@ -214,4 +217,14 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmmi9.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmsy9.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
+INPUT /home/casa/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmsans8-regular.luc
+INPUT ./image.jpeg
+INPUT ./image.jpeg
+INPUT ./Y-publicidade.tex
+INPUT ./Z-colofon.tex
+INPUT /usr/share/texmf-dist/fonts/tfm/arkandis/adforn/OrnementsADF.tfm
+OUTPUT LIVRO.toc
+INPUT ./LIVRO.aux
+INPUT ./INPUTS.aux
+INPUT /usr/share/texmf-dist/fonts/type1/arkandis/adforn/OrnementsADF.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcirclew.pfb
