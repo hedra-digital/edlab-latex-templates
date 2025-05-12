@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024/Arch Linux)  (format=lualatex 2025.3.9)  12 MAY 2025 15:09
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024/Arch Linux)  (format=lualatex 2025.3.9)  12 MAY 2025 16:00
  restricted system commands enabled.
 **LIVRO.tex
 (./LIVRO.tex
@@ -1202,22 +1202,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 66--71
 (/usr/share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-la.tex
 UTF-8 Latin hyphenation patterns
 (/usr/share/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-la.tex)))
-[4] (./LIVRO.toc
-Overfull \hbox (3.3507pt too wide) detected at line 3
-\TU/MinionPro(0)/m/sc/10.95  
- []
-
-
-Overfull \hbox (5.3217pt too wide) detected at line 4
-\TU/MinionPro(0)/m/n/10.95  
- []
-
-
-Overfull \hbox (5.3217pt too wide) detected at line 8
-\TU/MinionPro(0)/m/n/10.95  
- []
-
-) [5] (./MUSSUMIPSUM.tex [6
+[4] (./LIVRO.toc) [5] (./MUSSUMIPSUM.tex [6
 
 
 ] [7] [8]
@@ -1400,7 +1385,7 @@ nts/MinionPro-ItCapt.otf></home/casa/.fonts/MinionPro-Capt.otf></home/casa/.font
 s/MinionPro-BoldCapt.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmmono8
 -regular.otf></usr/share/texmf-dist/fonts/type1/arkandis/adforn/OrnementsADF.pfb
 ></usr/share/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcirclew.pfb>
-Output written on LIVRO.pdf (24 pages, 198539 bytes).
+Output written on LIVRO.pdf (24 pages, 198522 bytes).
 
 PDF statistics: 212 PDF objects out of 1000 (max. 8388607)
  129 compressed objects within 2 object streams
