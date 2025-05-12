@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024/Arch Linux)  (format=lualatex 2025.3.9)  12 MAY 2025 15:09
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024/Arch Linux)  (format=lualatex 2025.3.9)  12 MAY 2025 15:11
  restricted system commands enabled.
 **LIVRO.tex
 (./LIVRO.tex
@@ -574,32 +574,14 @@ eX
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 )
 (/usr/share/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
-(/usr/share/texmf-dist/tex/latex/lineno/lineno.sty
-Package: lineno 2023/05/20 line numbers on paragraphs v5.3
-\linenopenalty=\count324
-\output=\toks25
-\linenoprevgraf=\count325
-\linenumbersep=\dimen188
-\linenumberwidth=\dimen189
-\c@linenumber=\count326
-\c@pagewiselinenumber=\count327
-\c@LN@truepage=\count328
-\c@internallinenumber=\count329
-\c@internallinenumbers=\count330
-\quotelinenumbersep=\dimen190
-\bframerule=\dimen191
-\bframesep=\dimen192
-\bframebox=\box57
-LaTeX Info: Redefining \\ on input line 3180.
-)
 (/usr/share/texmf-dist/tex/latex/lipsum/lipsum.sty
 (/usr/share/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
 Package: l3keys2e 2024-02-18 LaTeX2e option processing using LaTeX3 keys
 )
 Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
-\g__lipsum_par_int=\count331
-\l__lipsum_a_int=\count332
-\l__lipsum_b_int=\count333
+\g__lipsum_par_int=\count324
+\l__lipsum_a_int=\count325
+\l__lipsum_b_int=\count326
 
 (/usr/share/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex))
 (/usr/share/texmf-dist/tex/latex/base/alltt.sty
@@ -622,16 +604,16 @@ Package graphics Info: Driver file: luatex.def on input line 107.
 (/usr/share/texmf-dist/tex/latex/graphics-def/luatex.def
 File: luatex.def 2022/09/22 v1.2d Graphics/color driver for luatex
 ))
-\Gin@req@height=\dimen193
-\Gin@req@width=\dimen194
+\Gin@req@height=\dimen188
+\Gin@req@width=\dimen189
 )
 (/usr/share/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count334
-\float@exts=\toks26
-\float@box=\box58
-\@float@everytoks=\toks27
-\@floatcapt=\box59
+\c@float@type=\count327
+\float@exts=\toks25
+\float@box=\box57
+\@float@everytoks=\toks26
+\@floatcapt=\box58
 )
 (/usr/share/texmf-dist/tex/latex/lettrine/lettrine.sty
 File: lettrine.sty 2024-01-20 v2.60 (Daniel Flipo)
@@ -639,37 +621,37 @@ File: lettrine.sty 2024-01-20 v2.60 (Daniel Flipo)
 (/usr/share/texmf-dist/tex/latex/l3packages/xfp/xfp.sty
 Package: xfp 2024-02-18 L3 Floating point unit
 )
-\c@DefaultLines=\count335
-\c@DefaultDepth=\count336
-\DefaultFindent=\dimen195
-\DefaultNindent=\dimen196
-\DefaultSlope=\dimen197
-\DiscardVskip=\dimen198
-\L@lettrine=\box60
-\L@lbox=\box61
-\L@tbox=\box62
-\c@L@lines=\count337
-\c@L@depth=\count338
-\L@Pindent=\dimen199
-\L@Findent=\dimen256
-\L@Nindent=\dimen257
-\L@lraise=\dimen258
-\L@first=\dimen259
-\L@next=\dimen260
-\L@slope=\dimen261
-\L@height=\dimen262
-\L@novskip=\dimen263
-\L@ruleht=\dimen264
-\L@target@ht=\dimen265
-\L@target@dp=\dimen266
-\L@target@tht=\dimen267
-\LettrineWidth=\dimen268
-\LettrineHeight=\dimen269
-\LettrineDepth=\dimen270
+\c@DefaultLines=\count328
+\c@DefaultDepth=\count329
+\DefaultFindent=\dimen190
+\DefaultNindent=\dimen191
+\DefaultSlope=\dimen192
+\DiscardVskip=\dimen193
+\L@lettrine=\box59
+\L@lbox=\box60
+\L@tbox=\box61
+\c@L@lines=\count330
+\c@L@depth=\count331
+\L@Pindent=\dimen194
+\L@Findent=\dimen195
+\L@Nindent=\dimen196
+\L@lraise=\dimen197
+\L@first=\dimen198
+\L@next=\dimen199
+\L@slope=\dimen256
+\L@height=\dimen257
+\L@novskip=\dimen258
+\L@ruleht=\dimen259
+\L@target@ht=\dimen260
+\L@target@dp=\dimen261
+\L@target@tht=\dimen262
+\LettrineWidth=\dimen263
+\LettrineHeight=\dimen264
+\LettrineDepth=\dimen265
 
 Loading lettrine.cfg
 (/usr/share/texmf-dist/tex/latex/lettrine/lettrine.cfg)
-\Llist@everypar=\toks28
+\Llist@everypar=\toks27
 )
 (/usr/share/texmf-dist/tex/latex/comment/comment.sty
 \CommentStream=\write4
@@ -715,17 +697,17 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
 )
 (/usr/share/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2023/03/13 v3.1a Micro-typographical refinements (RS)
-\MT@toks=\toks29
-\MT@tempbox=\box63
-\MT@count=\count339
+\MT@toks=\toks28
+\MT@tempbox=\box62
+\MT@count=\count332
 LaTeX Info: Redefining \noprotrusionifhmode on input line 1059.
 LaTeX Info: Redefining \leftprotrusion on input line 1060.
-\MT@prot@toks=\toks30
+\MT@prot@toks=\toks29
 LaTeX Info: Redefining \rightprotrusion on input line 1078.
 LaTeX Info: Redefining \textls on input line 1368.
-\MT@outer@kern=\dimen271
+\MT@outer@kern=\dimen266
 LaTeX Info: Redefining \textmicrotypecontext on input line 1988.
-\MT@listname@count=\count340
+\MT@listname@count=\count333
 
 (/usr/share/texmf-dist/tex/latex/microtype/microtype-luatex.def
 File: microtype-luatex.def 2023/03/13 v3.1a Definitions specific to luatex (RS)
@@ -744,64 +726,51 @@ File: microtype.cfg 2023/03/13 v3.1a microtype main configuration file (RS)
 (/usr/share/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip191
-\enit@outerparindent=\dimen272
-\enit@toks=\toks31
-\enit@inbox=\box64
-\enit@count@id=\count341
-\enitdp@description=\count342
+\enit@outerparindent=\dimen267
+\enit@toks=\toks30
+\enit@inbox=\box63
+\enit@count@id=\count334
+\enitdp@description=\count335
+)
+(/usr/share/texmf-dist/tex/latex/marginnote/marginnote.sty
+Package: marginnote 2018/08/09 1.4b non floating margin notes for LaTeX
+\c@mn@abspage=\count336
+)
+(/usr/share/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2023/10/27 v2.16 Sectioning titles
+\ttl@box=\box64
+\beforetitleunit=\skip192
+\aftertitleunit=\skip193
+\ttl@plus=\dimen268
+\ttl@minus=\dimen269
+\ttl@toksa=\toks31
+\titlewidth=\dimen270
+\titlewidthlast=\dimen271
+\titlewidthfirst=\dimen272
 )
 (/usr/share/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-)
-(/usr/share/texmf-dist/tex/latex/marginnote/marginnote.sty
-Package: marginnote 2018/08/09 1.4b non floating margin notes for LaTeX
-\c@mn@abspage=\count343
-)
-(/usr/share/texmf-dist/tex/latex/titlesec/titlesec.sty
-Package: titlesec 2023/10/27 v2.16 Sectioning titles
-\ttl@box=\box65
-\beforetitleunit=\skip192
-\aftertitleunit=\skip193
-\ttl@plus=\dimen273
-\ttl@minus=\dimen274
-\ttl@toksa=\toks32
-\titlewidth=\dimen275
-\titlewidthlast=\dimen276
-\titlewidthfirst=\dimen277
-)
-(/usr/share/texmf-dist/tex/latex/textpos/textpos.sty
-Package: textpos 2022/07/23 v1.10.1
-Package textpos Info: choosing support for LaTeX3 on input line 60.
-\TP@textbox=\box66
-\TPHorizModule=\dimen278
-\TPVertModule=\dimen279
-\TP@margin=\dimen280
-\TP@absmargin=\dimen281
-
-Grid set 16 x 16 = 38.39343pt x 49.68562pt
-\TPboxrulesize=\dimen282
-\TP@tbargs=\toks33
-) (./edlab-penalties.sty) (./edlab-git.sty) (./edlab-toc.sty)
-(./edlab-extra.sty (/usr/share/texmf-dist/tex/latex/base/ifthen.sty
+) (./edlab-git.sty)
+(./edlab-penalties.sty) (./edlab-toc.sty) (./edlab-extra.sty
+(/usr/share/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
-))
-(./edlab-margins.sty
+)) (./edlab-margins.sty
 
 Class memoir Warning: \marginparsep is zero or negative on input line 151.
 
 
 ******************************************************
 Stock height and width: 845.04684pt by 597.50787pt
-Top and edge trims: 56.9055pt and 109.5431pt
-Page height and width: 597.50787pt by 378.42165pt
-Text height and width: 473.4002pt by 275pt
-Spine and edge margins: 51.2299pt and 51.20001pt
-Upper and lower margins: 47.53113pt and 76.57654pt
-Headheight and headsep: 13.6pt and 14.22636pt
-Footskip: 27.46295pt
+Top and edge trims: 56.9055pt and 71.1319pt
+Page height and width: 654.41338pt by 455.24408pt
+Text height and width: 514.20023pt by 335pt
+Spine and edge margins: 59.75076pt and 59.5319pt
+Upper and lower margins: 68.2866pt and 71.92654pt
+Headheight and headsep: 28.45274pt and 19.8738pt
+Footskip: 34.1433pt
 Columnsep and columnseprule: 10pt and 0pt
-Marginparsep and marginparwidth: 0pt and 68.99792pt
+Marginparsep and marginparwidth: 0pt and 83.99034pt
 Sidecapsep and sidecapwidth: 7pt and 111pt
 Sidebarhsep and sidebarwidth: 7pt and 111pt
 Sidebarvsep and sidebartopsep: 13.6pt and 0pt
@@ -817,14 +786,14 @@ Package: manyfoot 2019/08/03 v1.11 Many Footnote Levels Package (NCC)
 (/usr/share/texmf-dist/tex/latex/ncctools/nccfoots.sty
 Package: nccfoots 2005/02/03 v1.2 NCC Footnotes Package (NCC)
 )
-\MFL@columnwidth=\dimen283
+\MFL@columnwidth=\dimen273
 \footglue=\skip194
 )
 (/usr/share/texmf-dist/tex/latex/footmisc/footmisc.sty
 Package: footmisc 2023/07/05 v6.0f a miscellany of footnote facilities
-\FN@temptoken=\toks34
-\footnotemargin=\dimen284
-\@outputbox@depth=\dimen285
+\FN@temptoken=\toks32
+\footnotemargin=\dimen274
+\@outputbox@depth=\dimen275
 Package footmisc Info: Declaring symbol style bringhurst on input line 696.
 Package footmisc Info: Declaring symbol style chicago on input line 704.
 Package footmisc Info: Declaring symbol style wiley on input line 713.
@@ -926,155 +895,106 @@ t;+tlig;+onum;"
 (fontspec)             <->"name:MinionPro/BI:mode=node;script=latn;language=dfl
 t;+tlig;+onum;+smcp;"
 
-luaotfload | aux : font no 48 (nil) defines no feature for script latn
-luaotfload | aux : font no 48 (nil) defines no feature for script dflt
-
-Package fontspec Info: Could not resolve font "ArialHebrew/BI" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: Could not resolve font "ArialHebrew/I" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: Font family 'ArialHebrew(0)' created for font 'Arial
-(fontspec)             Hebrew' with options [].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"name:ArialHebrew:mode=node;language=dflt;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->"name:ArialHebrew/B:mode=node;language=dflt;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
-
-luaotfload | aux : font no 53 (nil) defines no feature for script latn
-luaotfload | aux : font no 53 (nil) defines no feature for script dflt
-
-Package fontspec Info: Could not resolve font "ArialHebrew-Light/BI" (it
-(fontspec)             probably doesn't exist).
-
-
-Package fontspec Info: Could not resolve font "ArialHebrew-Light/B" (it
-(fontspec)             probably doesn't exist).
-
-
-Package fontspec Info: Could not resolve font "ArialHebrew-Light/I" (it
-(fontspec)             probably doesn't exist).
-
-
-Package fontspec Info: Font family 'ArialHebrew-Light(0)' created for font
-(fontspec)             'ArialHebrew-Light' with options [].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"name:ArialHebrew-Light:mode=node;language=dflt;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
-
- (./LIVRO.aux
-(./INPUTS.aux))
+ (./LIVRO.aux)
 \openout1 = LIVRO.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 73.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 71.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 7
-3.
- (/usr/share/texmf-dist/tex/latex/base/ts1cmr.fd
+1.
+
+(/usr/share/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
 
 Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
 (fontspec)             this).
 
 \symlegacymaths=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 73.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 73.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 73.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 73.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 73.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 73.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 73.
-LaTeX Font Info:    Redeclaring math accent \check on input line 73.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 73.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 73.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 73.
-LaTeX Font Info:    Redeclaring math symbol \colon on input line 73.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 73.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 73.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 73.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 73.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 73.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 73.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 73.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 73.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 73.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 73.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 73.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 73.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 73.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 71.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 71.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 71.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 71.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 71.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 71.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 71.
+LaTeX Font Info:    Redeclaring math accent \check on input line 71.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 71.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 71.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 71.
+LaTeX Font Info:    Redeclaring math symbol \colon on input line 71.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 71.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 71.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 71.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 71.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 71.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 71.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 71.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 71.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 71.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 71.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 71.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 71.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 71.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 73.
+(Font)              `operators' in the math version `normal' on input line 71.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/MinionPro(0)/m/n on input line 73.
+(Font)                  OT1/cmr/m/n --> TU/MinionPro(0)/m/n on input line 71.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 73.
+(Font)              `operators' in the math version `bold' on input line 71.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/MinionPro(0)/m/n on input line 73.
+(Font)                  OT1/cmr/bx/n --> TU/MinionPro(0)/m/n on input line 71.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  TU/MinionPro(0)/m/n --> TU/MinionPro(0)/m/n on input li
-ne 73.
+ne 71.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/MinionPro(0)/m/it on input line 73.
+(Font)                  OT1/cmr/m/it --> TU/MinionPro(0)/m/it on input line 71.
 
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/MinionPro(0)/b/n on input line 73.
+(Font)                  OT1/cmr/bx/n --> TU/MinionPro(0)/b/n on input line 71.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 73.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 71.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 73.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 71.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  TU/MinionPro(0)/m/n --> TU/MinionPro(0)/b/n on input li
-ne 73.
+ne 71.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/MinionPro(0)/b/it on input line 73
+(Font)                  OT1/cmr/bx/it --> TU/MinionPro(0)/b/it on input line 71
 .
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 73.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 71.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 73.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 71.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count344
-\scratchdimen=\dimen286
-\scratchbox=\box67
-\nofMPsegments=\count345
-\nofMParguments=\count346
-\everyMPshowfont=\toks35
-\MPscratchCnt=\count347
-\MPscratchDim=\dimen287
-\MPnumerator=\count348
-\makeMPintoPDFobject=\count349
-\everyMPtoPDFconversion=\toks36
+\scratchcounter=\count337
+\scratchdimen=\dimen276
+\scratchbox=\box65
+\nofMPsegments=\count338
+\nofMParguments=\count339
+\everyMPshowfont=\toks33
+\MPscratchCnt=\count340
+\MPscratchDim=\dimen277
+\MPnumerator=\count341
+\makeMPintoPDFobject=\count342
+\everyMPtoPDFconversion=\toks34
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 
@@ -1090,7 +1010,7 @@ Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-\pdftexcmds@toks=\toks37
+\pdftexcmds@toks=\toks35
 )
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
@@ -1103,22 +1023,22 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \microtypecontext on input line 73.
-Package microtype Info: Applying patch `item' on input line 73.
-Package microtype Info: Applying patch `toc' on input line 73.
-Package microtype Info: Applying patch `eqnum' on input line 73.
+LaTeX Info: Redefining \microtypecontext on input line 71.
+Package microtype Info: Applying patch `item' on input line 71.
+Package microtype Info: Applying patch `toc' on input line 71.
+Package microtype Info: Applying patch `eqnum' on input line 71.
 
 
-Package microtype Warning: Unable to apply patch `footnote' on input line 73.
+Package microtype Warning: Unable to apply patch `footnote' on input line 71.
 
-Package microtype Info: Applying patch `verbatim' on input line 73.
+Package microtype Info: Applying patch `verbatim' on input line 71.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 73.
+LaTeX Info: Redefining \showhyphens on input line 71.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of spacing.
 Package microtype Info: No adjustment of kerning.
@@ -1130,13 +1050,10 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 \openout2 = INPUTS.aux
 (./INPUTS.tex (./1-fronte.tex
-warning  (file ./FRONTE/FRONTE.pdf) (pdf inclusion): PDF inclusion: found PDF ve
-rsion '1.7', but at most version '1.5' allowed
-<./FRONTE/FRONTE.pdf, id=1, 853.58298pt x 853.58298pt>
-File: ./FRONTE/FRONTE.pdf Graphic file (type pdf)
-<use ./FRONTE/FRONTE.pdf>
-Package luatex.def Info: ./FRONTE/FRONTE.pdf  used on input line 48.
-(luatex.def)             Requested size: 110.96968pt x 110.96968pt.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `Formular' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
 )
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: TU).
@@ -1145,8 +1062,7 @@ Package microtype Info: Loading generic protrusion settings for font family
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
-<./FRONTE/FRONTE.pdf>]
-(./2-creditos.tex
+] (./2-creditos.tex
 Underfull \hbox (badness 10000) in paragraph at lines 50--51
 
  []
@@ -1184,68 +1100,106 @@ Underfull \hbox (badness 10000) in paragraph at lines 74--75
  []
 
 ) [2] (./3-rosto.tex
+
+Package fontspec Info: Font family 'MinionPro(1)' created for font 'Minion
+(fontspec)             Pro' with options [].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"name:MinionPro:mode=node;script=latn;language=dflt;"
+
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->"name:MinionPro:mode=node;script=latn;language=dflt;+
+smcp;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"name:MinionPro/B:mode=node;script=latn;language=dflt
+;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->"name:MinionPro/B:mode=node;script=latn;language=dflt
+;+smcp;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"name:MinionPro/I:mode=node;script=latn;language=dflt
+;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->"name:MinionPro/I:mode=node;script=latn;language=dflt
+;+smcp;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"name:MinionPro/BI:mode=node;script=latn;language=dfl
+t;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->"name:MinionPro/BI:mode=node;script=latn;language=dfl
+t;+smcp;"
+
+luaotfload | aux : font no 85 (nil) does not define feature smcp for script latn
+ with language dflt
+
+Package fontspec Info: Font family 'TimesNewRoman(0)' created for font 'Times
+(fontspec)             New Roman' with options [].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"name:TimesNewRoman:mode=node;script=latn;language=df
+lt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"name:TimesNewRoman/B:mode=node;script=latn;language=
+dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->"name:TimesNewRoman/B:mode=node;script=latn;language=
+dflt;+smcp;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"name:TimesNewRoman/I:mode=node;script=latn;language=
+dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->"name:TimesNewRoman/I:mode=node;script=latn;language=
+dflt;+smcp;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"name:TimesNewRoman/BI:mode=node;script=latn;language
+=dflt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->"name:TimesNewRoman/BI:mode=node;script=latn;language
+=dflt;+smcp;"
+
 Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `Formular' (encoding: TU).
+(microtype)             `TimesNewRoman' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-<logo.png, id=29, 494.84875pt x 494.84875pt>
-File: logo.png Graphic file (type png)
-<use logo.png>
-Package luatex.def Info: logo.png  used on input line 66.
-(luatex.def)             Requested size: 57.75185pt x 57.74832pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 66--71
-[] 
- []
-
-) [3<./logo.png>] (./PRETAS.tex
+ [3]) [4] (./PRETAS.tex
 (/usr/share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-la.tex
 UTF-8 Latin hyphenation patterns
 (/usr/share/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-la.tex)))
-[4] (./LIVRO.toc
-Overfull \hbox (3.3507pt too wide) detected at line 3
-\TU/MinionPro(0)/m/sc/10.95  
- []
+[5] [6]
+No file LIVRO.toc.
+[7] (./MUSSUMIPSUM.tex [8
 
 
-Overfull \hbox (5.3217pt too wide) detected at line 4
-\TU/MinionPro(0)/m/n/10.95  
- []
+] [9] [10] [11
 
-
-Overfull \hbox (5.3217pt too wide) detected at line 8
-\TU/MinionPro(0)/m/n/10.95  
- []
-
-) [5] (./MUSSUMIPSUM.tex [6
-
-
-] [7] [8]
-
-LaTeX Font Warning: Font shape `TU/Formular(0)/m/sc' undefined
-(Font)              using `TU/Formular(0)/m/n' instead on input line 3.
-
-[9
-
-] [10]
+] [12]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `FormularLight' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 9.
+(Font)              <10.95> on input line 9.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 9.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 9.
-Package marginnote Info: Margin note 11.1 is on absolute page 11 on input line 
-20.
-Package marginnote Info: xpos seems to be 160.26999pt on input line 20.
+Package marginnote Info: Suggest that margin note 13.1 will be on
+(marginnote)             absolute page 13.
+(marginnote)             This may be wrong on input line 20.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 20.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <9> on input line 23.
-Package marginnote Info: Margin note 11.2 is on absolute page 11 on input line 
-27.
-Package marginnote Info: xpos seems to be 160.26999pt on input line 27.
+Package marginnote Info: Suggest that margin note 13.2 will be on
+(marginnote)             absolute page 13.
+(marginnote)             This may be wrong on input line 27.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 27.
 
 Overfull \hbox (0.80396pt too wide) in paragraph at lines 27--27
 []\TU/lmtt/m/n/7 lettrine.sty 
@@ -1255,155 +1209,46 @@ Package lettrine.sty Info: Targeted height = 20.7175pt
 (lettrine.sty)             (for loversize=0, accent excluded),
 (lettrine.sty)             Lettrine height = 19.94792pt (\textcolor {red}{M});
 (lettrine.sty)             reported on input line 27.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 34.
-[11
-
-] [12]
-Package marginnote Info: Margin note 13.1 is on absolute page 13 on input line 
-96.
-Package marginnote Info: xpos seems to be 160.26999pt on input line 96.
- [13] [14
+[13
 
 ]
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `lmss' (encoding: TU).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
- [15]
-Package marginnote Info: Margin note 16.1 is on absolute page 16 on input line 
-157.
-Package marginnote Info: xpos seems to be 160.26999pt on input line 157.
-Package marginnote Info: Margin note 16.2 is on absolute page 16 on input line 
-190.
-Package marginnote Info: xpos seems to be 160.26999pt on input line 190.
-<image.jpeg, id=81, 190.7125pt x 265.99374pt>
-File: image.jpeg Graphic file (type jpg)
-<use image.jpeg>
-Package luatex.def Info: image.jpeg  used on input line 192.
-(luatex.def)             Requested size: 137.5pt x 191.78322pt.
+Package marginnote Info: Suggest that margin note 14.1 will be on
+(marginnote)             absolute page 14.
+(marginnote)             This may be wrong on input line 96.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 96.
+ [14] [15] [16
 
+]
+! Undefined control sequence.
+<recently read> \linenumbers 
+             
+l.133 \linenumbers
+                
+? x
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-Package marginnote Info: Margin note 16.3 is on absolute page 16 on input line 
-216.
-Package marginnote Info: xpos seems to be 160.26999pt on input line 216.
-[16] [17<./image.jpeg>] [18] [19] [20] [21]) (./Y-publicidade.tex [22]
-Underfull \hbox (badness 10000) in paragraph at lines 15--17
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 18--20
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 21--23
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 24--26
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--29
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 30--32
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 33--35
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 36--38
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 39--41
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 42--44
-
- []
-
-) [23] (./Z-colofon.tex)) [24]
-
-******************************************************
-Stock height and width: 845.04684pt by 597.50787pt
-Top and edge trims: 56.9055pt and 109.5431pt
-Page height and width: 597.50787pt by 378.42165pt
-Text height and width: 483pt by 275pt
-Spine and edge margins: 51.2299pt and 51.20001pt
-Upper and lower margins: 47.53113pt and 66.97675pt
-Headheight and headsep: 13.6pt and 14.22636pt
-Footskip: 27.46295pt
-Columnsep and columnseprule: 10pt and 0pt
-Marginparsep and marginparwidth: 10.95pt and 29.30002pt
-Sidecapsep and sidecapwidth: 7pt and 111pt
-Sidebarhsep and sidebarwidth: 7pt and 111pt
-Sidebarvsep and sidebartopsep: 13.6pt and 0pt
-Sidebarheight: 539.9202pt
-Sidefoothsep and sidefootwidth: 7pt and 111pt
-Sidefootvsep and sidefootheight: 13.6pt and 539.9202pt
-******************************************************
-
-\tf@toc=\write5
-
-\openout5 = LIVRO.toc
-(./LIVRO.aux (./INPUTS.aux))
- ***********
-LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2020/03/25>
- ***********
-
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-)
-(\end occurred inside a group at level 1)
-
-### semi simple group (level 1) entered at line 6 (\begingroup)
-### bottom level
 
 Here is how much of LuaTeX's memory you used:
- 15240 strings out of 476447
- 125317,1977958 words of node,token memory allocated
- 1624 words of node memory still in use:
-   8 hlist, 1 vlist, 2 rule, 2 disc, 1 local_par, 14 glue, 9 kern, 1 penalty, 2 
-margin_kern, 17 glyph, 47 attribute, 192 glue_spec, 25 attribute_list, 3 shape, 
-4 write, 6 pdf_colorstack nodes
-   avail lists: 1:4,2:987,3:245,4:80,5:2103,6:54,7:5341,8:19,9:603,10:22,11:580
- 36922 multiletter control sequences out of 65536+600000
- 116 fonts using 15039031 bytes
- 85i,16n,101p,1358b,528s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/share/texmf-dist/fonts/enc/dvips/adforn/OrnementsADF.enc}</usr/share/texmf
--dist/fonts/opentype/public/lm/lmsans8-regular.otf></home/casa/.fonts/MinionPro-
-It.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.otf></ho
-me/casa/.fonts/MinionPro-Disp.otf></home/casa/.fonts/Formular-Light.otf></home/c
-asa/.fonts/MinionPro-Subh.otf></home/casa/.fonts/MinionPro-Regular.otf></home/ca
-sa/.fonts/MinionPro-Bold.otf></home/casa/.fonts/Formular-Italic.otf></home/casa/
-.fonts/Formular-Bold.otf></home/casa/.fonts/Formular-Regular.otf></home/casa/.fo
-nts/MinionPro-ItCapt.otf></home/casa/.fonts/MinionPro-Capt.otf></home/casa/.font
-s/MinionPro-BoldCapt.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmmono8
--regular.otf></usr/share/texmf-dist/fonts/type1/arkandis/adforn/OrnementsADF.pfb
-></usr/share/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcirclew.pfb>
-Output written on LIVRO.pdf (24 pages, 198539 bytes).
+ 14709 strings out of 476447
+ 125317,1977958 words of node,token memory allocated 7404 words of node memory still in use:
+   19 hlist, 2 rule, 3 mark, 54 disc, 5 local_par, 1 dir, 122 glue, 194 kern, 14
+ penalty, 4 margin_kern, 476 glyph, 77 attribute, 198 glue_spec, 40 attribute_li
+st, 3 if_stack, 4 shape, 4 write, 8 pdf_colorstack nodes
+   avail lists: 1:2,2:847,3:206,4:80,5:1984,6:58,7:5006,8:19,9:586,10:24,11:672
+ 36440 multiletter control sequences out of 65536+600000
+ 120 fonts using 22616791 bytes
+ 85i,15n,99p,1358b,504s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.otf></home/casa
+/.fonts/MinionPro-Disp.otf></home/casa/.fonts/Formular-Light.otf></home/casa/.fo
+nts/MinionPro-Subh.otf></home/casa/.fonts/MinionPro-Bold.otf></home/casa/.fonts/
+Times New Roman.ttf></home/casa/.fonts/MinionPro-It.otf></home/casa/.fonts/Minio
+nPro-Regular.otf></home/casa/.fonts/MinionPro-ItCapt.otf></home/casa/.fonts/Mini
+onPro-Capt.otf></home/casa/.fonts/MinionPro-BoldCapt.otf></home/casa/.fonts/Form
+ular-Bold.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmmono8-regular.ot
+f></usr/share/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcirclew.pfb>
+Output written on LIVRO.pdf (16 pages, 104956 bytes).
 
-PDF statistics: 212 PDF objects out of 1000 (max. 8388607)
- 129 compressed objects within 2 object streams
+PDF statistics: 150 PDF objects out of 1000 (max. 8388607)
+ 91 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 100000000)
 

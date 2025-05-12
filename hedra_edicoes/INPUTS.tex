@@ -1,0 +1,48 @@
+% Este documento tem a ver com as partes do LIVRO. 
+\input{1-fronte}       % [Frontistício]
+\input{2-creditos}     % [Créditos]
+\input{3-rosto}	       % [folha de rosto]
+
+% nothing			is level -3
+% \book				is level -2
+% \part				is level -1
+% \chapter 			is level 0
+% \section 			is level 1
+% \subsection 		is level 2
+% \subsubsection 	is level 3
+% \paragraph 		is level 4
+% \subparagraph 	is level 5
+\setcounter{secnumdepth}{0}
+\setcounter{tocdepth}{0}
+
+
+\pagebreak
+\begingroup \footnotesize \parindent0pt \parskip 5pt \thispagestyle{empty} \vspace*{-0.5\textheight}\mbox{} \vfill
+\baselineskip=.92\baselineskip
+\input{PRETAS.tex}
+\endgroup
+
+\pagebreak\thispagestyle{empty}\movetooddpage
+{\begingroup\mbox{}\pagestyle{empty}
+\pagestyle{empty} 
+% \renewcommand{\contentsname}{Índex} 	% Trocar nome do sumário para 'Índex'
+\ifodd\thepage\relax\else\blankpage\fi 	% Verifica se página é par e coloca página branca
+\addtocontents{toc}{\protect\thispagestyle{empty}}
+\tableofcontents*\clearpage\endgroup}
+
+% \input{INTRO}
+\input{MUSSUMIPSUM}
+% \input{TEXTO.tex}
+
+% Indice remissivo (package: `\usepackage{makeidx}` e no início do arquivi `\makeindex`
+% \printindex
+
+% Indice
+% \renewcommand{\contentsname}{Índice}
+% \setcounter{tocdepth}{3}
+% \tableofcontents
+
+% \endnotes
+
+\input{Y-publicidade}	   % [lista de livros publicados]
+\input{Z-colofon}		   % [colofon]

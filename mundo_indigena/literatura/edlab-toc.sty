@@ -1,0 +1,187 @@
+% edlab-toc.sty
+
+% nothing			is level -3
+% \book				is level -2
+% \part				is level -1
+% \chapter 			is level 0
+% \section 			is level 1
+% \subsection 		is level 2
+% \subsubsection 	is level 3
+% \paragraph 		is level 4
+% \subparagraph 	is level 5
+
+
+% \cft... (ver manual memoir, seção 9.2.2, p.153)
+
+% ---> [cap.] |   |1|  | Este é um capitulo .........| | 1
+% ------------------------------------------------------------|
+% (H)                                   |(b)      (a)        (A) 
+% ------------------------------------------------------------|
+% ---> [cap.] |   |2|  | Este é outro capitulo ......| | 2
+% (H)  (B)        (C)   (I) (D)                      (E)    (F) 
+% ------------------------------------------------------------|
+%                                                    		 (c)
+% ------------------------------------------------------------|
+
+% (a) \setpnumwidth
+% (b) \setrmarg 			Margem direita para quebra de texto longo
+% (c) parskip				Espaço entre parágrafo (só geral)
+
+% (A) before...skip 		Distância vertical antes da seção
+% (B) name 					Palavra acrescentada antes do número (ex: cap.)
+% (C) numwidth 				Distância entre (C) e (D)
+% (D) font 					Formatação para trecho (B), (C) e (D)
+% (E) leader 				Linha pontilhada entre seção e número
+% (F) formatpnum			Formatação do número
+% (G)
+% (H) indent				Identação inicial da linha
+% (I) 						Caracter antes do (D)
+% (J)						Caracter antes do (C)
+% (K)						Caracter depois do (C)
+
+% Gerais
+\renewcommand{\cftparskip}{2pt}  	% Parskip entre seções
+\setpnumwidth{1em}					% Distância entre leader (E) e nũmero (F)				 
+\setrmarg{5.55em plus 1fil}			% Quebra uma linha
+
+% (A) Distância vertical antes do categoria anterior 
+\renewcommand{\cftbeforepartskip}{.6em}
+\renewcommand{\cftbeforechapterskip}{.2em}
+\renewcommand{\cftbeforesectionskip}{0em}
+\renewcommand{\cftbeforesubsubsectionskip}{0em}
+\renewcommand{\cftbeforeparagraphskip}{0em}
+\renewcommand{\cftbeforesubparagraphskip}{0em}
+
+% (B) Palavra acrescentada antes do número
+% \renewcommand{\cftbookname}{Liv.}				
+% \renewcommand{\cftpartname}{Parte}
+% \renewcommand{\cftchaptername}{Cap.}
+% \renewcommand{\cftsectionname}{Sec.}
+% \renewcommand{\cftsubsubsectionname}{Sub.}
+% \renewcommand{\cftparagraphname}{Par.}
+% \renewcommand{\cftsubparagraphname}{Subpar.}
+
+% (C) Distância horizontal entre (C) e (D)
+\renewcommand{\cftbooknumwidth}{2em}			
+\renewcommand{\cftpartnumwidth}{2em}
+\renewcommand{\cftchapternumwidth}{2em}
+\renewcommand{\cftsectionnumwidth}{4em}
+\renewcommand{\cftsubsectionnumwidth}{4em}
+\renewcommand{\cftsubsubsectionnumwidth}{4em}
+\renewcommand{\cftparagraphnumwidth}{4em}
+\renewcommand{\cftsubparagraphnumwidth}{4em}
+
+% (D) Formatação para trecho (B), (C) e (D)
+\renewcommand{\cftbookfont}{\normalsize\scshape\MakeTextLowercase}
+\renewcommand{\cftpartfont}{\normalsize\scshape\MakeTextLowercase}
+\renewcommand{\cftchapterfont}{\normalsize}
+\renewcommand{\cftsectionfont}{\footnotesize}
+\renewcommand{\cftsubsectionfont}{\footnotesize}
+\renewcommand{\cftsubsubsectionfont}{\footnotesize}
+\renewcommand{\cftparagraphfont}{\footnotesize}
+\renewcommand{\cftsubparagraphfont}{\footnotesize}
+
+% (F) formatpnum			Formatação do número
+\renewcommand{\cftbookformatpnum}{\normalsize\scshape}
+\renewcommand{\cftpartformatpnum}{\normalsize\scshape}
+\renewcommand{\cftchapterformatpnum}{\normalsize}
+\renewcommand{\cftsectionformatpnum}{\footnotesize}
+\renewcommand{\cftsubsectionformatpnum}{\footnotesize}
+\renewcommand{\cftsubsubsectionformatpnum}{\footnotesize}
+\renewcommand{\cftparagraphformatpnum}{\footnotesize}
+\renewcommand{\cftsubparagraphformatpnum}{\footnotesize}
+
+% (E) leader: Linha pontilhada entre seção e número
+\renewcommand{\cftbookleader}{\titlerule*[3mm]{.}}
+\renewcommand{\cftpartleader}{\titlerule*[3mm]{.}}
+\renewcommand{\cftchapterleader}{\dotfill}
+\renewcommand{\cftsectionleader}{\dotfill}
+\renewcommand{\cftsubsectionleader}{\dotfill}
+\renewcommand{\cftsubsubsectionleader}{\dotfill}
+\renewcommand{\cftparagraphleader}{\dotfill}
+\renewcommand{\cftsubparagraphleader}{\dotfill}
+
+
+% (H) indent				Identação inicial da linha
+\renewcommand{\cftbookindent}{0ex}
+\renewcommand{\cftpartindent}{0ex}
+\renewcommand{\cftchapterindent}{0ex}
+\renewcommand{\cftsectionindent}{1ex}
+\renewcommand{\cftsubsectionindent}{1ex}
+\renewcommand{\cftsubsubsectionindent}{1ex}
+\renewcommand{\cftparagraphindent}{1ex}
+\renewcommand{\cftsubparagraphindent}{1ex}
+
+
+% (I) Caracter antes do (D)
+% \renewcommand{\cftbookaftersnumb}{}
+% \renewcommand{\cftpartaftersnumb}{}
+% \renewcommand{\cftchapteraftersnumb}{}
+% \renewcommand{\cftsectionaftersnumb}{}
+% \renewcommand{\cftsubsectionaftersnumb}{}
+% \renewcommand{\cftsubsubsectionaftersnumb}{}
+% \renewcommand{\cftparagraphaftersnumb}{}
+% \renewcommand{\cftsubparagraphaftersnumb}{}
+
+% (J) Caracter antes do (C)
+% \renewcommand{\cftbookpresnum}{}
+% \renewcommand{\cftpartpresnum}{}
+% \renewcommand{\cftchapterpresnum}{}
+% \renewcommand{\cftsectionpresnum}{}
+% \renewcommand{\cftsubsectionpresnum}{}
+% \renewcommand{\cftsubsubsectionpresnum}{}
+% \renewcommand{\cftparagraphpresnum}{}
+% \renewcommand{\cftsubparagraphpresnum}{}
+
+% (K) Caracter depois do (C)
+% \renewcommand{\cftbookaftersnum}{}
+% \renewcommand{\cftpartaftersnum}{}
+% \renewcommand{\cftchapteraftersnum}{}
+% \renewcommand{\cftsectionaftersnum}{}
+% \renewcommand{\cftsubsectionaftersnum}{}
+% \renewcommand{\cftsubsubsectionaftersnum}{}
+% \renewcommand{\cftparagraphaftersnum}{}
+% \renewcommand{\cftsubparagraphaftersnum}{}
+
+% Tips
+
+% \addtocontents{toc}{\cftpagenumbersoff{chapter}} % Tirar número de páginas
+
+
+
+% Comando \titlerule retirado do pacote titledoc.sty
+\providecommand\titlerule{\@ifstar{\ttl@row}{\ttl@rule}}
+\let\ttl@leaders\xleaders
+\def\ttl@row{\@ifnextchar[{\ttl@row@i}{\ttl@row@i[\wd\z@]}}
+\def\ttl@row@i[#1]#2{%
+  \ifvmode\expandafter\titleline\fi
+  {\sbox\z@{#2}%
+   \hspace{-#1}%
+   \hskip\wd\z@
+   \ttl@leaders\hb@xt@#1{\hss\box\z@}%
+   \hfill\kern\z@}}
+
+\def\ttl@rule{\@ifnextchar[{\ttl@rule@i}{\ttl@rule@i[.4pt]}}
+\def\ttl@rule@i[#1]{%
+  \ifvmode\expandafter\titleline\fi
+  {\leaders\hrule height #1\hfill\kern\z@}}
+
+\providecommand\filright{%
+  \gdef\ttl@filleft##1{\hskip##1}%
+  \gdef\ttl@filright##1{\hfill}%
+  \let\\\@centercr
+  \advance\rightskip\z@ \@plus 1fil\relax}
+\providecommand\filleft{%
+  \gdef\ttl@filleft##1{\hfill}%
+  \gdef\ttl@filright##1{\hskip##1}%
+  \let\\\@centercr
+  \advance\leftskip\z@ \@plus 1fil
+  \parfillskip\z@}
+\providecommand\filcenter{\filleft\filright
+  \gdef\ttl@filleft##1{\hfill}}
+\providecommand\fillast{%
+  \gdef\ttl@filleft##1{\hfill}%
+  \gdef\ttl@filright##1{\hfill}%
+  \let\\\@centercr
+  \filleft\advance\rightskip\z@ \@plus -1fil
+  \parfillskip\z@ \@plus 2fil\relax}

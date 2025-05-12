@@ -1,6 +1,0 @@
-edlab-footnotes.sty:% Notas de fim (package: \usepackage{endnotes})
-edlab-footnotes.sty:\DeclareOption{endnotes}{
-edlab-footnotes.sty:\AtEndOfClass{\RequirePackage{endnotes}
-edlab-footnotes.sty:\let\footnote\endnote}
-edlab-footnotes.sty:    % endnotes
-INPUTS.tex:% \endnotes
