@@ -1,0 +1,58 @@
+\RequirePackage{xcolor}
+\RequirePackage{mdframed}
+\RequirePackage{float}
+\RequirePackage{caption}
+
+% Definindo cores
+\definecolor{boxbg}{RGB}{248,249,250}
+%\definecolor{leftbar}{RGB}{0,123,255}
+\definecolor{leftbar}{RGB}{0,0,0}
+\definecolor{textcolor}{RGB}{33,37,41}
+
+% Criando um novo tipo de float personalizado
+\newfloat{custombox}{htbp}{lob}[section]
+\floatname{custombox}{Box}
+
+% Estilo do mdframed com configurações de parágrafo
+\mdfdefinestyle{myboxstyle}{
+    backgroundcolor=boxbg,
+    linecolor=leftbar,
+    linewidth=3pt,
+    topline=false,
+    rightline=false,
+    bottomline=false,
+    leftline=true,
+    innerleftmargin=12pt,
+    innerrightmargin=8pt,
+    innertopmargin=5pt,
+    innerbottommargin=5pt,
+    roundcorner=2pt,
+    font=\fontsize{10pt}{12pt}\selectfont\color{textcolor}
+}
+
+% Ambiente do box como float independente
+\newenvironment{myboxwithcaption}[2][htbp]{%
+    \begin{custombox}[#1]
+    \ifx\relax#2\relax\else\caption{#2}\fi
+    \begin{mdframed}[style=myboxstyle]
+    \setlength{\parskip}{6pt}%
+    \setlength{\parindent}{0pt}%
+}{%
+    \end{mdframed}
+    \end{custombox}
+}
+
+% Versão sem caption
+\newenvironment{mybox}[1][htbp]{%
+    \begin{custombox}[#1]
+    \begin{mdframed}[style=myboxstyle]
+    \setlength{\parskip}{3pt}%
+    \setlength{\parindent}{0pt}%
+    \raggedright
+}{%
+    \end{mdframed}
+    \end{custombox}
+}
+
+% Comando para referenciar boxes
+\newcommand{\boxref}[1]{Box~\ref{#1}}
