@@ -120,6 +120,36 @@
   %\headsep=5pt
 }
 
+\DeclareOption{13x18}{%
+  \setbinding{3mm}
+  \settrimmedsize{180mm}{130mm}{*}
+  \settypeblocksize{140mm}{80mm}{*}
+  \setulmargins{14mm}{*}{1}
+  \setheadfoot{5mm}{10mm}
+  \setheaderspaces{0mm}{*}{0}
+  \headsep=2mm
+
+  % --- Bloco de Margens Corrigido ---
+  % 1. Primeiro, declaramos e definimos o valor da margem externa.
+  \newlength{\myforemargin}
+  \setlength{\myforemargin}{20mm}
+
+  % 2. Agora, usamos a variável no comando.
+  % A memoir calculará a margem interna (*) usando a largura do papel,
+  % a largura do texto e a margem externa que fornecemos.
+  % A proporção (terceiro argumento) é irrelevante quando uma das
+  % margens é calculada, mas definimos como 1 por clareza.
+  \setlrmarginsandblock{*}{\myforemargin}{1}
+  % --- Fim do Bloco Corrigido ---
+
+  % 3. Finalmente, aplicamos e validamos o layout.
+  % A opção [fixed] é crucial para desativar os cálculos automáticos
+  % da memoir (como a proporção de Van de Graaf) e usar nossos valores.
+  \checkandfixthelayout[fixed]
+}
+
+
+
 \newcommand{\marcadecorte}{}
 \DeclareOption{trimframe}{\renewcommand{\marcadecorte}{\trimFrame}}
 \DeclareOption{sembinding}{\setbinding{0mm}}
