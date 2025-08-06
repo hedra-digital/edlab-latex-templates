@@ -1,0 +1,102 @@
+\documentclass[11pt,a4paper]{article}
+
+% Pacotes necessários
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[left=20mm,right=20mm,top=21mm,bottom=21mm,paperwidth=210mm,paperheight=297mm]{geometry}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{microtype}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{wrapfig}
+\usepackage{calc}
+\usepackage{fontspec}
+
+% Definir cor de fundo
+\definecolor{almondcolor}{cmyk}{0,0.09,0.018,0.07}
+\pagecolor{almondcolor}
+
+% Configuração de fonte
+\setmainfont[Ligatures=TeX,Numbers=OldStyle]{Formular}
+
+% Alinhamento à esquerda
+\raggedright
+
+% Configuração de espaçamento
+\setstretch{1.2}
+
+% Configuração de indentação
+\setlength{\parindent}{3ex}
+
+% Remover numeração de páginas
+\pagestyle{empty}
+
+% Configuração de seções
+\titleformat{\section}
+{\normalfont\large\bfseries}
+{}
+{0pt}
+{}
+
+% Configuração do título principal
+\newcommand{\maintitle}[1]{%
+\noindent\begin{minipage}{11cm}
+{\LARGE\bfseries #1}\bigskip
+\end{minipage}
+}
+
+% Configuração da linha fina
+\newcommand{\linhafina}[1]{%
+\noindent\begin{minipage}{11cm}
+{\itshape #1}
+\end{minipage}
+}
+
+% Comando para informações do livro na margem
+\newcommand{\bookinfo}[6]{%
+\begin{wrapfigure}{r}{40mm}
+\includegraphics[width=50mm]{./THUMB.pdf}
+\smallskip
+
+\textbf{Título} \textit{#1}\\
+\textbf{Autor} #2\\
+\textbf{Editora} #3\\
+\textbf{ISBN} #4\\
+\textbf{Pág.} #5\\
+\textbf{Preço} #6
+\end{wrapfigure}
+}
+
+\begin{document}
+
+% Título principal
+\maintitle{Mussum Ipsum, cacilds vidis litro abertis}
+
+% Linha fina em itálico
+\linhafina{Si num tem leite então bota uma pinga aí cumpadi! Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum}
+
+\vspace{1cm}
+
+% Informações do livro na margem direita
+\bookinfo{Título do livro}{Autor}{Editora}{ISBN}{Páginas}{Preço}
+
+% Texto principal
+\noindent Mussum Ipsum, cacilds vidis litro abertis. Diuretics paradis num copo é motivis de denguis. Pellentesque nec nulla ligula. Donec gravida turpis a vulputate ultricies. Bota 1 metro de cachacis aí pra viagem! Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio.
+
+Viva Forevis aptent taciti sociosqu ad litora torquent. Cevadis im ampola pa arma uma pindureta. Copo furadis é disculpa de bebadis, arcu quam euismod magna. In elementis mé pra quem é amistosis quis leo.
+
+Si num tem leite então bota uma pinga aí cumpadi! Paisis, filhis, espiritis santis. Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl. Quem num gosta di mim que vai caçá sua turmis!
+
+Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. Morbi viverra placerat justo, vel pharetra turpis.
+
+\section{Sobre o autor}
+
+\textbf{Fulano de tal} Mussum Ipsum, cacilds vidis litro abertis.  Bota 1 metro de cachacis aí pra viagem! Viva Forevis aptent taciti sociosqu ad litora torquent. Manduma pindureta quium dia nois paga. Nulla id gravida magna, ut semper sapien.
+
+\section{Trechos do livro}
+
+Mussum Ipsum, cacilds vidis litro abertis.  Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. Negão é teu passadis, eu sou faxa pretis. Quem num gosta di mé, boa gentis num é. Delegadis gente finis, bibendum egestas augue arcu ut est.
+
+Quem num gosta di mé, boa gentis num é. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis. Bota 1 metro de cachacis aí pra viagem!
+\end{document}
