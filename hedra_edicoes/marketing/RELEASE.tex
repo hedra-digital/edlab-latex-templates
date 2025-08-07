@@ -12,6 +12,12 @@
 \usepackage{wrapfig}
 \usepackage{calc}
 \usepackage{fontspec}
+\usepackage{adforn}
+\usepackage{multicol}
+
+
+\newcommand{\asterisc}{\begin{center}\adforn{14}\end{center}}
+
 
 % Definir cor de fundo
 \definecolor{almondcolor}{cmyk}{0,0.09,0.018,0.07}
@@ -21,7 +27,7 @@
 \setmainfont[Ligatures=TeX,Numbers=OldStyle]{Formular}
 
 % Alinhamento à esquerda
-\raggedright
+%\raggedright
 
 % Configuração de espaçamento
 \setstretch{1.2}
@@ -59,10 +65,10 @@
 \includegraphics[width=50mm]{./THUMB.pdf}
 \smallskip
 
-\textbf{Título} \textit{#1}\\
+\textbf{Título}\\ \textit{#1}\\
 \textbf{Autor} #2\\
 \textbf{Editora} #3\\
-\textbf{ISBN} #4\\
+\textbf{ISBN}\\ #4\\
 \textbf{Pág.} #5\\
 \textbf{Preço} #6
 \end{wrapfigure}
@@ -71,32 +77,133 @@
 \begin{document}
 
 % Título principal
-\maintitle{Mussum Ipsum, cacilds vidis litro abertis}
+\maintitle{Uma frase impactante\\ sobre o melhor livro do mundo}
 
 % Linha fina em itálico
-\linhafina{Si num tem leite então bota uma pinga aí cumpadi! Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum}
+\linhafina{
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat.}
+ 
 
 \vspace{1cm}
 
 % Informações do livro na margem direita
-\bookinfo{Título do livro}{Autor}{Editora}{ISBN}{Páginas}{Preço}
+\bookinfo{O nome do livro}{Autor da Silva}{Hedra}{978-65-89705-46-8}{120}{46}
+% prefácio Tales Ab'Sáber
 
-% Texto principal
-\noindent Mussum Ipsum, cacilds vidis litro abertis. Diuretics paradis num copo é motivis de denguis. Pellentesque nec nulla ligula. Donec gravida turpis a vulputate ultricies. Bota 1 metro de cachacis aí pra viagem! Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio.
+\noindent 
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-Viva Forevis aptent taciti sociosqu ad litora torquent. Cevadis im ampola pa arma uma pindureta. Copo furadis é disculpa de bebadis, arcu quam euismod magna. In elementis mé pra quem é amistosis quis leo.
 
-Si num tem leite então bota uma pinga aí cumpadi! Paisis, filhis, espiritis santis. Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl. Quem num gosta di mim que vai caçá sua turmis!
-
-Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. Morbi viverra placerat justo, vel pharetra turpis.
-
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 \section{Sobre o autor}
 
-\textbf{Fulano de tal} Mussum Ipsum, cacilds vidis litro abertis.  Bota 1 metro de cachacis aí pra viagem! Viva Forevis aptent taciti sociosqu ad litora torquent. Manduma pindureta quium dia nois paga. Nulla id gravida magna, ut semper sapien.
+\small
+\textbf{Autor a Silva} é doutor em Lorem ipsum dolor sit amet, consectetur
+ adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+ aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+ nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+ reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+ pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+ officia deserunt mollit anim id est laborum.
+
+\pagebreak
 
 \section{Trechos do livro}
 
-Mussum Ipsum, cacilds vidis litro abertis.  Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. Negão é teu passadis, eu sou faxa pretis. Quem num gosta di mé, boa gentis num é. Delegadis gente finis, bibendum egestas augue arcu ut est.
+\begin{multicols}{2}
 
-Quem num gosta di mé, boa gentis num é. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis. Bota 1 metro de cachacis aí pra viagem!
+Mas, por voltas anacrônicas da história, daquelas de arrepiar os pelos de
+imberbes historiadores positivistas (e eles são muitos), o bastardo pardo do
+século \textsc{xx} pode estar no século \textsc{xix}, e o senhor de engenho do \textsc{xix} pode estar
+no século \textsc{xx} — e ambos, bastardo e senhor, podem estar vivíssimos no século
+\textsc{xxi}. Essas duas figuras — por sinal, conceitos jurídicos — compõem o
+filamento genético pátrio desde que o Brasil é Brasil. Compreendê-las,
+portanto, significa compreender a formação do país; estudá-las de perto
+potencializa a compreensão do ``Negro drama'' dos Racionais e as razões do
+drama de Luiz Gama, duas expressões de um mesmo fenômeno ``antigo e moderno'',
+quiçá mesmo ``imortal'', que tem chão no Brasil. 
+
+O filho da ``madame nagô'' Luiza Mahin, assim como o da ``adusta Líbia rainha''
+Ana Soares, conhecia na carne a dor do abandono paterno. Diferentemente,
+porém, de Mano Brown, que não conheceu o pai, Gama conviveu com o seu por
+nove anos. Se um foi abandonado recém-nascido, o outro o foi ainda na
+infância. Ambos nunca esqueceram o que o pai fez. Ambos, ainda, refletiram
+muito sobre o que significava ser ``um bastardo, mais um filho pardo, sem
+pai'', no inferno intersecular do Brasil. Ambos, finalmente, falaram o mínimo
+do mínimo sobre o pai, daí que o adjetivo ``canalha'', com o qual Brown definiu
+o seu, e o ``manto de silêncio'' que Gama jogou sobre o nome do fidalgo,
+justamente para ``poupar à sua infeliz memória uma injúria dolorosa'', são
+bastante eloquentes para analisar a dialética do bastardo-pardo e do
+senhor-branco.
+\end{multicols}
+
+\asterisc
+
+\begin{multicols}{2}
+
+Quando escreveu a carta que se tornaria sua autobiografia, em 25 de julho de
+1880, Luiz Gama fez questão de sublinhar, já no preâmbulo, que puxaria de
+cabeça as histórias que viriam pela frente. É como se todos aqueles
+apontamentos — ``que sempre eu os trouxe de memória'' — estivessem por muito
+tempo guardados a sete chaves no porão de sua casa e ele agora resolvesse
+mostrá-los ao destinatário, Lúcio de Mendonça. 
+
+O leitor da autobiografia de Gama, portanto, sente-se como o narrador de ``O
+Aleph'', que visita o porão de Daneri e lá se maravilha — e se horroriza —
+com o que vê. Como lembra Borges, ``Senti infinita veneração, infinita
+pena'', o mesmo sentimento que toma quem lê a autobiografia de Gama. Feito o
+Aleph de Daneri, porém, o de Gama também precisa de sua casa. A autobiografia
+bem pode ser o cristal que projeta ``todos os pontos do universo'' de Gama,
+mas tudo principia com a casa.  O sobrado de São Salvador é a chave para o
+infinito particular de Gama — e é com ele que inicia sua autobiografia. Ir
+até ao casarão da rua do Bângala, portanto, e descer ao seu porão significa
+ver, se os olhos permitirem, os mais de mil ``lances doridos'' da ``vida
+amargurada'' do filho de Luiza Mahin. 
+\end{multicols}
+
+
+
+\asterisc
+
+\begin{multicols}{2}
+
+Aí está a perspicácia do autor da genial narrativa autobiográfica: ele torna o
+próprio caso menor para que vejamos o tráfico. Ele se exclui, e na própria
+autobiografia!, para enxergarmos o ``sistema embriagado'' que permite a
+``embriaguez'' do pai, a do amigo do pai, e a do parceiro novo, naquela
+operação bêbada, do pai. No fundo, o pai é o de menos, assim como ele também
+se torna de menos, diante da monstruosidade do holocausto do tráfico. Indicar
+o nome da embarcação, o que fatalmente leva para o de seu capitão, tem,
+portanto, um duplo propósito: por um lado, retraçar o seu processo individual
+de escravização no fatídico 10 de novembro de 1840, e, por outro, jogar luz
+no mal alumiado — e não menos seu — processo coletivo de escravização de
+todos os dias e em todas as horas do Império do Brasil.   
+\end{multicols}
+
+
 \end{document}
