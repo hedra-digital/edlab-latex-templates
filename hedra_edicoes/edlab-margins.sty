@@ -79,11 +79,12 @@
   \headsep=2mm
 }
 
+% Coleção «hedra edições» — mancha em paicas (22pc = 264pt ≈ 93mm)
 \DeclareOption{largepost}{%
   \setbinding{3mm}
-  \stockaiv 
+  \stockaiv
   \settrimmedsize{210mm}{133mm}{*}
-  \settypeblocksize{*}{97mm}{1.7}
+  \settypeblocksize{*}{22pc}{1.7}
   \setlrmargins{*}{*}{1.2}
   \setulmargins{*}{*}{1.7}
 %  \setheadfoot{5mm}{10mm}
@@ -167,7 +168,9 @@
 \marcadecorte
 
 
-\setmarginnotes{0pt}{.25\textwidth}{-3cm}
+% O separador precisa ser > 0 aqui: o \checkandfixthelayout abaixo roda antes
+% do bloco «Medidas» do LIVRO.tex e avisaria «\marginparsep is zero or negative».
+\setmarginnotes{1em}{.25\textwidth}{-3cm}
 
 \checkandfixthelayout
 %\tolerance=500

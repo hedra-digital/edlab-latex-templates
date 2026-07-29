@@ -20,9 +20,14 @@
 \usepackage{float}						% para flutuar imagens e tabelas 		
 \usepackage{lettrine}					% para capsulares
 \usepackage{comment}					% para comentar o código em bloco \begin{comment}...
+\usepackage{etoolbox}					% para comandos condicionais como \ifdef
 \usepackage{adforn}						% para adornos & glyphs
 \usepackage{xcolor}					 	% para texto colorido
-\usepackage[babel]{microtype}			% para ajustes finos na mancha
+\usepackage[babel,
+            protrusion=true,			% margens óticas (kerning de borda)
+            expansion=true,				% expansão de glifo (hz-program)
+            final
+            ]{microtype}				% para ajustes finos na mancha
 \usepackage{enumerate,enumitem}			% para tipos diferentes de enumeração/formatação ver `edlab-extra.sty`
 \usepackage{url}					% para citar sites \url
 \usepackage{marginnote}					% para notas laterais
@@ -31,7 +36,9 @@
 %\usepackage{makeidx} 					% para índice remissivo
 
 \usepackage{edlab-penalties}
-\usepackage{edlab-git}
+% edlab-git.sty é GERADO pelo Makefile (hash do commit p/ o colofão).
+% Carregado só se existir, para o template compilar em clone novo sem `make`.
+\IfFileExists{edlab-git.sty}{\usepackage{edlab-git}}{}
 \usepackage{edlab-toc}					% define sumário
 \usepackage{edlab-extra}				% define epígrafe, quote
 \usepackage[largepost]{edlab-margins}
@@ -43,7 +50,13 @@
 			chicagofootnotes			% para notas com número e ponto cf. man. de Chicago
 			]{edlab-footnotes}
 
+			\frenchspacing
+
 \babelprovide[transforms = hyphen.repeat]{portuguese}
+
+\setSingleSpace{1.03}	% entrelinha 13.6pt sobre corpo 11pt
+\SingleSpacing
+\parfillskip=0pt plus .75\textwidth	% evita última linha de parágrafo muito curta
 
 % Medidas (ver: memoir p.11 fig.2.3)
 \parindent=3ex			% Tamanho da indentação
@@ -55,20 +68,29 @@
 \newfontfamily\formular{Formular}
 \newfontfamily\formularlight{Formular Light}
 \newfontfamily\brabo{FS Brabo Pro Regular}
-\setmainfont[Ligatures=TeX,Numbers=OldStyle]{Minion Pro}
+% Não mapeie os cortes à mão (UprightFont/ItalicFont/...): se um dos nomes não
+% resolver, o fontspec cai em silêncio no redondo e o livro inteiro sai sem
+% itálico. Deixe o fontspec resolver a família e escolher os cortes óticos.
+\setmainfont[Ligatures={TeX,Common},
+             Numbers=OldStyle,
+             SmallCapsFeatures={Letters=SmallCaps}
+             ]{Minion Pro}
 
 
 % Estilos
-\makeoddhead{baruch}{}{\scshape\MakeLowercase{\scshape\MakeTextLowercase{}}}{}
-\makeevenhead{baruch}{}{\scshape\MakeLowercase{}}{}
+% Cabeço par = título da parte corrente (\parttitle, ver `edlab-sections.sty`)
+% Cabeço ímpar = título do capítulo corrente (\leftmark)
+% Sem \part no livro, defina aqui o título curto que vai no cabeço par:
+% \renewcommand*\parttitle{Título curto do livro}
+\makeoddhead{baruch}{}{\scshape\MakeLowercase{\scshape\MakeTextLowercase{\leftmark}}}{}
+\makeevenhead{baruch}{}{\scshape\MakeLowercase{\parttitle}}{}
 \makeevenfoot{baruch}{}{\footnotesize\thepage}{}
 \makeoddfoot{baruch}{}{\footnotesize\thepage}{}
-\pagestyle{baruch}		
+\pagestyle{baruch}
 \headstyles{baruch}
 
 % Testes
 
-\baselineskip=1.5\baselineskip
 
 \begin{document}
 
