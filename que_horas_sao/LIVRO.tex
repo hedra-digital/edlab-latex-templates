@@ -31,7 +31,9 @@
 %\usepackage{makeidx} 					% para índice remissivo
 
 \usepackage{edlab-penalties}
-\usepackage{edlab-git}
+% edlab-git.sty é GERADO pelo Makefile (hash do commit p/ o colofão).
+% Carregado só se existir, para o template compilar em clone novo sem `make`.
+\IfFileExists{edlab-git.sty}{\usepackage{edlab-git}}{}
 \usepackage{edlab-toc}					% define sumário
 \usepackage{edlab-extra}				% define epígrafe, quote
 \usepackage[post]{edlab-margins}
