@@ -36,7 +36,23 @@
 \setlength{\epigraphrule}{0pt}				% tira a linha
 % \setlength{\epigraphwidth}{.6\textwidth}	% aumenta o tamanho da epígra
 % \epigraphtextposition{flushright}			
-% \epigraphtextposition{flushleft}
+% ⚠️ A EPÍGRAFE SAI JUSTIFICADA, e isso não é o padrão do memoir.
+% A classe traz «\newcommand{\textflush}{flushleft}» (memoir.cls, l. 6826), e o
+% \@epitext compõe o texto dentro de um \begin{flushleft} — ou seja, em bandeira
+% à direita. Numa epígrafe de dois versos ninguém repara; numa de sete linhas de
+% prosa, como a da Apresentação do volume 1, as linhas param onde a palavra
+% seguinte não cabe e o bloco fica visivelmente irregular à direita: medido a
+% 600 dpi, a 2ª e a 3ª linhas terminavam 4,4 pt antes das outras.
+%
+% O memoir não oferece um valor «justificado» para \epigraphtextposition — só
+% flushleft, flushright e center —, então declara-se um ambiente que não faz
+% nada, e o parágrafo volta à composição normal da casa. A assinatura continua
+% pela direita, que é o padrão e é o que se quer.
+%
+% Diagnosticado em 15/9/2026, na prova do «Diário de um escritor» (volume 1);
+% trazido ao template em 8/10/2026.
+\newenvironment{epijustificado}{}{}
+\epigraphtextposition{epijustificado}
 % \epigraphsourceposition{flushright} 
 
 % Enumerate (enumitem.sty)
@@ -76,10 +92,38 @@
 
 % Comando para fazer subtítulo
 \newcommand{\subtitulo}[1]{\NoCaseChange{\textnormal{\break\Large\itshape#1}}}
-\newcommand{\chapterspecial}[2]{%
+% \chapterspecial{Título}{Subtítulo} — capítulo numerado, entra no sumário com número.
+% \chapterspecial*{Título}{Subtítulo} — capítulo SEM número: não gasta o contador,
+%   não imprime «Capítulo N» na abertura e entra no sumário sem numeral, mas mantém
+%   o cabeço e o reset das notas de rodapé, como qualquer capítulo.
+%
+% A estrela serve ao paratexto que abre o volume (apresentação, nota da edição,
+% introdução de terceiro), que não é capítulo da obra: contado, empurra a
+% numeração dos capítulos do autor. Nasceu no «Diário de um escritor» em
+% 14/9/2026, onde a Apresentação e a Introdução viravam capítulos 1 e 2, e veio ao
+% template em 8/10/2026.
+\newcommand{\chapterspecial}{\@ifstar\edlab@chapterspecialsn\edlab@chapterspecialnum}
+\newcommand{\edlab@chapterspecialnum}[2]{%
  \chapter[#1]%
      {#1\ifx#2\relax\else\subtitulo{#2}\fi}%
 \markright{#1}}
+% A forma estrelada aceita, desde 17/9/2026, um argumento OPCIONAL com a
+% entrada do sumário, para quando ela precisa dizer mais que o título:
+%   \chapterspecial*[Apresentação, \textit{por Irineu Franco Perpetuo}]{Apresentação}{}
+% Sem ele, nada muda — a entrada continua sendo o próprio título.
+% ⚠️ Existe porque a macro JÁ grava a sua entrada: acrescentar um
+% \addcontentsline à mão logo depois dela não substitui a dela, soma-se, e o
+% sumário sai com o item repetido.
+% O cabeço segue o título, nunca a entrada longa.
+\newcommand{\edlab@chapterspecialsn}[3][]{%
+ \chapter*{#2\ifx#3\relax\else\subtitulo{#3}\fi}%
+ \def\edlab@tocsn{#1}%
+ \ifx\edlab@tocsn\@empty
+   \addcontentsline{toc}{chapter}{#2}%
+ \else
+   \addcontentsline{toc}{chapter}{#1}%
+ \fi
+\markright{#2}}
 
 % bibliohedra 
 \RequirePackage{ifthen}
@@ -117,3 +161,79 @@
 
 % Asterisc
 \newcommand{\asterisc}{\begin{center}\adforn{14}\end{center}}
+
+% Imprint da folha de rosto (regra da casa, ago. 2026; refeita em 15/9/2026)
+% O logotipo e, logo abaixo, a linha de cidade e ano formam um bloco só. A linha
+% corre como linha de texto, com os espaços de palavra normais, alinhada pela
+% esquerda sob o logotipo — e não pode ultrapassá-lo. A medida sai do próprio
+% logotipo, nunca de um valor digitado, que envelhece assim que alguém mexe no
+% corpo do «hedra». Se a linha não couber, o corpo dela desce até caber; por isso
+% o argumento de \linhahedra leva só a família da fonte, não o tamanho.
+%
+% ⚠️ A linha NÃO se bloca, e o \hfill saiu das chamadas. A primeira versão desta
+% macro, de 19/8/2026, blocava com \makebox[...][s] e um \hfill entre a cidade e
+% o ano, «cidade e estado pela esquerda, ano pela direita». Enquanto havia o
+% estado, o texto quase preenchia a largura e o \hfill sobrava 2,33 pt; quando a
+% sigla saiu, em 31/8/2026, sobrou 6,31 pt, e o ano ficou pendurado na borda com
+% a vírgula da cidade órfã no meio do vão. O padrão bom é anterior às duas
+% coisas: está no ORIDES_HELIANTO_MIOLO_2ad71f1 (2/4/2026), com os dois espaços
+% da linha iguais, 2,49 pt cada. É esse que o [l] devolve.
+%
+% ⚠️ O vão entre o logotipo e a linha passou a morar AQUI, e não em cada livro.
+% Antes cada rosto punha o seu (\smallskip, \vspace{-0.5cm}, \vspace*{-.5em},
+% \medskip, nada), e o mesmo comando dava vãos diferentes: o -.5em vale 8,6 pt
+% sob \LARGE e 5,5 pt sob \normalsize, de modo que copiar o comando de um livro
+% para outro não copia a medida. Medido pelo acervo, o vão ia de −0,06 a
+% 10,52 pt. Agora o \logohedra fecha o próprio parágrafo com a profundidade
+% zerada — a descendente do corpo 30, que sozinha valia uns 6 pt e mudava com a
+% fonte —, e o \linhahedra abre o seu com a interlinha suprimida e o
+% \edlablogovao no lugar dela. Mexer no vão é mexer aqui, uma vez.
+\newlength{\edlablogolarg}
+\newlength{\edlablinhalarg}
+\newlength{\edlablogovao}
+\setlength{\edlablogovao}{6.4pt}
+\newcommand{\logohedra}[1]{%
+  \settowidth{\edlablogolarg}{#1}%
+  \global\edlablogolarg=\edlablogolarg  % a medida tem de sobreviver ao grupo:
+  {\noindent\raisebox{0pt}[\height][0pt]{#1}\par}}  % em vários livros a linha
+\newcommand{\linhahedra}[1]{%             % vem noutro
+  \par\nointerlineskip\vskip\edlablogovao
+  \begingroup
+    \small\settowidth{\edlablinhalarg}{#1}%
+    \ifdim\edlablinhalarg>\edlablogolarg
+      \footnotesize\settowidth{\edlablinhalarg}{#1}\fi
+    \ifdim\edlablinhalarg>\edlablogolarg
+      \scriptsize\fi
+    \noindent\makebox[\edlablogolarg][l]{#1}\par
+  \endgroup}
+
+% \imprinthedra{<logotipo>}{<linha de cidade e ano>} --- 17/9/2026
+%
+% Aqui a medida corre ao CONTRÁRIO do par \logohedra/\linhahedra: quem manda é
+% a linha, e o logotipo desce até a largura dela, de modo que o «a» de «hedra»
+% feche com o último algarismo do ano.
+%
+% ⚠️ Por que o logotipo encolhe em vez de a linha blocar. Nos seis volumes do
+% «Diário de um escritor», onde a macro nasceu, e neste template, a linha vai em Minion Pro --- a fonte do texto ---, e não na Times do logotipo,
+% que é o que o livro de referência do imprint faz (orides_helianto, citado
+% acima). A Minion corre mais estreita: a linha mede 62,56 pt contra 66,62 do
+% logotipo, e faltam 4,06. Blocada, esses 4,06 iriam para os dois espaços de
+% palavra, que passariam de 2,27 a 4,30 pt --- +89%, o ano pendurado na borda e
+% a vírgula da cidade órfã no meio do vão. Foi exatamente isso que se reverteu
+% em 31/8/2026, e não se repete. Encolher o logotipo 6% alinha as duas bordas
+% sem tocar no espacejamento da linha.
+%
+% O fator não se digita: sai do \settowidth das duas medidas, e por isso
+% sobrevive à virada do ano, que muda a largura da linha.
+\newcommand{\imprinthedra}[2]{%
+  \begingroup\small\settowidth{\edlablinhalarg}{#2}%
+    \global\edlablinhalarg=\edlablinhalarg\endgroup
+  {\noindent\raisebox{0pt}[\height][0pt]{%
+     \resizebox{\edlablinhalarg}{!}{#1}}\par}%
+  \par\nointerlineskip\vskip\edlablogovao
+  \begingroup\small\parfillskip\z@\@plus1fil\noindent#2\par\endgroup}
+% ⚠️ O \parfillskip de cola infinita é proteção, e não enfeite (8/10/2026): o
+% LIVRO.tex deste template põe «\parfillskip=0pt plus .75\textwidth», e com
+% cola finita a linha curta do imprint era esticada como linha justificada ---
+% espaços de 2,3 a 3,7 pt e a expansão de glifo a +2% ---, passando 3,7 pt do
+% logotipo que devia fechar com ela.

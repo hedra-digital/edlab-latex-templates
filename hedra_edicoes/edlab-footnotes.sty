@@ -21,10 +21,30 @@
   \hrule width \textwidth height .2pt
   \kern 2.6\p@}}}
 
+% Condiciona a inserção do ponto apenas a notas numéricas — assim \footnote[*]{}
+% sai «* Texto» e não «*. Texto». Portado em 3/9/2026 da versão do arquivo que já
+% roda nos livros da Orides (orides_alba, _helianto, _teia, _rosacea, _transposicao),
+% onde o asterisco é a marca das notas de procedência dos paratextos.
+\newcommand{\edlab@footnotedot}{%
+  \expandafter\edlab@isnumeric\expandafter{\@thefnmark}%
+}
+\newcommand{\edlab@isnumeric}[1]{%
+  \if!\ifnum9<1#1!\fi
+    .%
+  \fi
+}
+
 \DeclareOption{chicagofootnotes}{\renewcommand{\footnoterule}{\vfill}
+  % A marca da nota vai em algarismo versal (lining), não em elzevir: no elzevir
+  % os algarismos 3, 4, 5, 7 e 9 descem abaixo da linha e o ponto que vem logo
+  % depois parece sobrescrito. Só a marca muda; o texto da nota segue em elzevir.
+  \newcommand\edlab@notamarca{%
+    \ifdefined\addfontfeature
+      {\addfontfeature{Numbers=Lining}\@thefnmark\edlab@footnotedot}%
+    \else\@thefnmark\edlab@footnotedot\fi}
   \renewcommand\@makefntext[1]{\frenchspacing 
     \parindent 0em% 
-    \@thefnmark.~#1}
+    \edlab@notamarca~#1}
     % endnotes
     \newcommand\enoteformat{\parindent 1em\theenmark.~}
     }
@@ -35,4 +55,114 @@
 
 \ProcessOptions%
 
+% ---------------------------------------------------------------------------
+% Nota longa pode partir-se entre páginas — 14/9/2026
+% ---------------------------------------------------------------------------
+% Provada nos seis volumes do «Diário de um escritor» (hedra-editora/
+% dostoievski_diariodeumescritor) e trazida ao template em 8/10/2026. ⚠️ Os
+% livros já compostos com o template antigo NÃO a recebem por herança: mexer em
+% penalidade muda a paginação, e cada um se emenda à parte, se for o caso.
+% As medidas abaixo são as do volume 1 do «Diário».
+%
+% O QUE ESTAVA ERRADO. Na p. 101 do volume 1 havia 45,5 pt de branco — 3,36
+% linhas — entre a última linha de texto e o bloco de notas. O vão natural
+% entre os dois, medido nas 122 páginas com nota do volume, é de 31,1 pt.
+% Onze páginas tinham buraco de uma linha ou mais, somando 541 pt.
+%
+% A CAUSA, em duas partes:
+%
+%   1. O `\footnoterule' desta casa é `\vfill' (ver a opção `chicagofootnotes'
+%      abaixo). Tirar o fio é decisão nossa e continua valendo; mas a cola
+%      infinita que ficou no lugar dele engole toda a folga da página e prende o
+%      bloco de notas à margem inferior. Não é ela que encurta a página — é ela
+%      que transforma página curta em BURACO, em vez de pé ragged.
+%
+%   2. A página encurtou porque a linha seguinte trazia a chamada de uma nota de
+%      sete linhas (77 pt) e só havia 45,5 pt. Para caber, o TeX teria de partir
+%      a nota, e estava proibido por quatro travas somadas: o
+%      `\floatingpenalty\@MM' que o próprio LaTeX põe dentro de toda nota, e as
+%      três penalidades globais do `edlab-penalties.sty' —
+%      `\interlinepenalties = 2 8000 8000', `\widowpenalties = 3 10000 9000 6000'
+%      e `\clubpenalties = 2 8000 600' —, que valem DENTRO do parágrafo da nota
+%      também, e não só no corpo do texto. (Valores de então: as três listas
+%      repetiam o último número em toda linha, e foram emendadas em 2/10/2026 —
+%      ver o `edlab-penalties.sty'.)
+%
+% O QUE OS MANUAIS DIZEM, e é unânime: nota longa se parte; buraco no pé não se
+% faz. Está no Chicago Manual of Style, no Hart's Rules / New Oxford Style Manual
+% e em Hochuli & Kinross, «Designing Books», com a ressalva prática de deixar ao
+% menos DUAS linhas de cada lado da partição. ⚠️ Bringhurst e Tschichold NÃO
+% chegam ao mesmo, como este comentário dizia até 30/9/2026: Bringhurst chama a
+% nota que invade a página seguinte de «abjeto fracasso de design» (4.3.1,
+% p. 76), e Tschichold a admite com parcimônia (p. 158) e aceita a página curta
+% (p. 170). Ver o verbete «Notas de rodapé» do manual.
+%
+% O QUE SE FAZ AQUI. Relaxam-se as quatro penalidades DENTRO DA INSERÇÃO DA NOTA,
+% e só ali — o corpo do texto fica intocado, com as penalidades do
+% `edlab-penalties.sty' inteiras. As viúvas seguem proibidas: os 10000 de
+% `\widowpenalties' e `\clubpenalties' impedem que a partição deixe uma linha
+% sozinha de qualquer um dos lados, que é exatamente a regra das duas linhas.
+%
+% MEDIDO no volume 1, recompilando: a p. 101 se fecha (entram mais duas linhas
+% de texto, a nota 3 começa ali e continua no alto do bloco da p. 102), as
+% páginas com buraco caem de 11 para 10, e o volume continua com 246 páginas.
+%
+% ⚠️ O QUE ISTO NÃO RESOLVE, e não é para resolver. Sobram oito páginas com vão
+% de uma a duas linhas onde a nota tem duas ou três linhas e não há como
+% parti-la sem viúva — ali o remédio é de composição, caso a caso, com o `\EP'
+% do `edlab-extra.sty'. E sobram as páginas que FECHAM capítulo (no volume 1, a
+% 20 e a 28): o branco ao fim de um capítulo é legítimo, e ali o `\vfill' faz o
+% serviço certo, mandando as notas ao pé em vez de deixá-las boiando no meio da
+% página.
+%
+% O `\AtBeginDocument' não é zelo: o `footmisc', carregado acima, redefine o
+% `\@footnotetext', e a emenda tem de vir depois dele.
+\RequirePackage{etoolbox}
+\AtBeginDocument{%
+  \makeatletter
+  \patchcmd{\@footnotetext}%
+    {\floatingpenalty \@MM}%
+    {\floatingpenalty 100
+     \interlinepenalties=1 100
+     \widowpenalties=2 10000 100
+     \clubpenalties=2 10000 100
+     \brokenpenalty 100 }%
+    {}%
+    {\PackageWarning{edlab-footnotes}{Nao consegui liberar a particao de notas
+      longas: o \string\@footnotetext\space nao tem a forma esperada. O buraco
+      no pe das paginas volta}}%
+  \makeatother}
+% ---------------------------------------------------------------------------
 
+% ---------------------------------------------------------------------------
+% O vão acima das notas encolhe menos do que estica — 14/9/2026
+% ---------------------------------------------------------------------------
+% O memoir entrega `\skip\footins' em 12pt plus 4pt minus 4pt: o espaço que
+% separa o texto do aparato pode ir de 8 a 16 pt conforme a página aperte ou
+% sobre. Simétrico, e é aí que está o problema — a p. 101 do volume 1, depois
+% que as notas passaram a partir-se (acima), fechou no MÍNIMO da faixa, com 21,1
+% pt de vão contra os 31,1 pt das vizinhas: três quartos de linha mais apertada,
+% e o editor viu a olho.
+%
+% O vão acima das notas não é espaço de enchimento: é o sinal de que o texto
+% acabou e começou o aparato. Pode esticar --- ar a mais ali lê-se como a página
+% respirando --- mas não deve comprimir na mesma medida, porque comprimir
+% empurra a nota contra o texto e enfraquece justamente a fronteira que ela
+% marca. Daí a cola assimétrica, que não é invenção nossa: é a proporção que a
+% própria `book.cls' do LaTeX usa (`\@plus 4\p@ \@minus 2\p@'), e que o memoir
+% afrouxou.
+%
+% MEDIDO no volume 1, recompilando as três hipóteses e contando as páginas em
+% que a última linha é de texto (100 delas):
+%
+%   \skip\footins        páginas  apertadas  com buraco  branco  p. 101
+%   12pt ±4pt (memoir)      246       28          8      273 pt  21,1 pt
+%   12pt +4pt -2pt          246       23          9      292 pt  30,1 pt  ← este
+%   12pt +4pt -0pt          250       13         10      340 pt  30,1 pt
+%
+% Tirar a compressão de vez custa QUATRO páginas de livro: a elasticidade é o
+% que deixa as páginas fecharem. Metade dela sai de graça — a p. 101 volta ao
+% vão normal, as páginas apertadas caem de 28 para 23, e o volume não muda de
+% extensão.
+\AtBeginDocument{\setlength{\skip\footins}{12pt plus 4pt minus 2pt}}
+% ---------------------------------------------------------------------------

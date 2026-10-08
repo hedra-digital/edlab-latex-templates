@@ -59,11 +59,13 @@
               \vfill
 
               \newfontfamily\timesnewroman{Times New Roman}
-              {\noindent\fontsize{30}{40}\selectfont\timesnewroman hedra}
-              \smallskip
-              
-              {\selectfont\minion\small
-              \noindent São Paulo \quad\the\year}
+              % Imprint: \imprinthedra (edlab-extra.sty) encolhe o logotipo até a
+              % largura da linha de cidade e ano, que corre com vírgula e espaço
+              % normal, sem \hfill nem \quad. Padrão do «Diário de um escritor»,
+              % trazido ao template em 8/10/2026.
+              \normalsize
+              \imprinthedra{\fontsize{30}{40}\selectfont\timesnewroman hedra}%
+                           {\minion São Paulo, \the\year}
 
 \endgroup
 \pagebreak
